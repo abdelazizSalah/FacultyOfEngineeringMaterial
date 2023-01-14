@@ -1,0 +1,263 @@
+# Reading pref.tcl
+# OpenFile {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/seqRadix4Booth.v}
+vlog seqRadix4Booth.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:59:51 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplier
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	RadixboothMult
+# End time: 13:59:51 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Warning: (vlog-31) Unable to unlink file "C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/work/_lock".
+# Permission denied. (errno = EACCES)
+vlog seqRadix4Booth.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:00:03 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplier
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	RadixboothMult
+# End time: 14:00:03 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Warning: (vlog-31) Unable to unlink file "C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/work/_lock".
+# Permission denied. (errno = EACCES)
+vlog seqRadix4Booth.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:00:20 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplier
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	RadixboothMult
+# End time: 14:00:20 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog seqRadix4Booth.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:00:43 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:00:43 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog seqRadix4Booth.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:00:47 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:00:47 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim Radix4BoothMultiplierSeq
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:00:51 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+add wave *
+force -freeze sim:/Radix4BoothMultiplierSeq/clk 1 0, 0 {50 ps} -r 100
+force rst 1
+run
+force rst 0
+force load 1
+force multiplier 0101
+force multiplicand 0100
+run
+run
+force load 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+
+run
+run
+quit -sim
+# End time: 14:05:17 on Dec 26,2022, Elapsed time: 0:04:26
+# Errors: 0, Warnings: 0
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:08:52 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4BoothMultiplier.v 
+# ** Error: (vlog-7) Failed to open design unit file "seqRadix4BoothMultiplier.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 14:08:52 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./seqRadixScript.tcl line 1
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog seqRadix4BoothMultiplier.v"
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:09:16 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:09:17 on Dec 26,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:09:17 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+run
+run
+quit -sim
+# End time: 14:11:22 on Dec 26,2022, Elapsed time: 0:02:05
+# Errors: 0, Warnings: 0
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:12:25 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:12:25 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:12:25 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+run
+run
+run
+quit -sim
+# End time: 14:28:51 on Dec 26,2022, Elapsed time: 0:16:26
+# Errors: 0, Warnings: 0
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:29:54 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:29:54 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:29:54 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+run
+run
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:30:40 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:30:40 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:30:41 on Dec 26,2022, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 0
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:30:41 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+quit -sim
+# End time: 14:31:05 on Dec 26,2022, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 0
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:31:22 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:31:22 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:31:22 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+quit -sim
+# End time: 14:32:06 on Dec 26,2022, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 0
+quit -sim
+do seqRadixScript.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:32:17 on Dec 26,2022
+# vlog -reportprogress 300 seqRadix4Booth.v 
+# -- Compiling module Radix4BoothMultiplierSeq
+# -- Compiling module RadixboothMult
+# 
+# Top level modules:
+# 	Radix4BoothMultiplierSeq
+# 	RadixboothMult
+# End time: 14:32:17 on Dec 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim Radix4BoothMultiplierSeq 
+# Start time: 14:32:17 on Dec 26,2022
+# Loading work.Radix4BoothMultiplierSeq
+# End time: 14:36:30 on Dec 26,2022, Elapsed time: 0:04:13
+# Errors: 0, Warnings: 0

@@ -1,0 +1,8 @@
+module halfAdder(x, y, cout, sum); 
+input x, y;
+output cout, sum; 
+
+assign cout = x and y;
+assign sum = x xor y; 
+
+endmodule

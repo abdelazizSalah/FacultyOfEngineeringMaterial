@@ -1,0 +1,46 @@
+# Reading pref.tcl
+# OpenFile {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v}
+vlib work
+vlog -reportprogress 300 -work work {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/defines.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:37:53 on Nov 15,2022
+# vlog -reportprogress 300 -work work C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/defines.v 
+# End time: 16:37:53 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:37:53 on Nov 15,2022
+# vlog -reportprogress 300 -work work C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 16:37:53 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog defines.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:38:01 on Nov 15,2022
+# vlog -reportprogress 300 defines.v 
+# End time: 16:38:01 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog controlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:38:07 on Nov 15,2022
+# vlog -reportprogress 300 controlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 16:38:07 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim ControlUnit
+# vsim ControlUnit 
+# Start time: 16:38:13 on Nov 15,2022
+# Loading work.ControlUnit
+add wave *
+force opcode 000100
+run
+force opcode 000001
+run
+# End time: 16:55:06 on Nov 15,2022, Elapsed time: 0:16:53
+# Errors: 0, Warnings: 0

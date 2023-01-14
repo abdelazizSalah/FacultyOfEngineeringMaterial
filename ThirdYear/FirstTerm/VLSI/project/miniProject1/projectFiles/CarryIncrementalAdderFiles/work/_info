@@ -1,0 +1,172 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject1/projectFiles
+v__RippleAdder__
+!s110 1667410227
+!i10b 1
+!s100 Wf2O0C@hH`M7PP7zP82MW2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IS@QS9X8Tdo9bFb`8[Z=VD1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject1/projectFiles/CarryIncrementalAdderFiles
+w1667409975
+8__RippleAdder__.v
+F__RippleAdder__.v
+!i122 17
+Z4 L0 1 33
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1667410227.000000
+!s107 __RippleAdder__.v|
+!s90 -reportprogress|300|__RippleAdder__.v|
+!i113 1
+Z6 tCvgOpt 0
+n@__@ripple@adder__
+vcarryIncrementAdder
+!s110 1667413788
+!i10b 1
+!s100 4I]6Xe4Z7T;GNVzPoaXN22
+R1
+I@V8bP6b^h^SAz:g:odFj80
+R2
+R3
+w1667413779
+8carryIncrementAdder.v
+FcarryIncrementAdder.v
+!i122 40
+L0 1 47
+R5
+r1
+!s85 0
+31
+!s108 1667413788.000000
+!s107 carryIncrementAdder.v|
+!s90 -reportprogress|300|carryIncrementAdder.v|
+!i113 1
+R6
+ncarry@increment@adder
+vcarryIncrementAdder2
+!s110 1667413488
+!i10b 1
+!s100 Sda>O4YJd=0@5PMMKENnd3
+R1
+I@MWGEz2ci4nj75lRKEhW^1
+R2
+R3
+w1667413476
+8carry2.v
+Fcarry2.v
+!i122 36
+L0 1 51
+R5
+r1
+!s85 0
+31
+!s108 1667413488.000000
+!s107 carry2.v|
+!s90 -reportprogress|300|carry2.v|
+!i113 1
+R6
+ncarry@increment@adder2
+vcarrySaveAdder
+!s110 1667256930
+!i10b 1
+!s100 A31EKkN_GaZSAkUWL1E0G1
+R1
+Icn1=gBXXF9HVT[18N;J`D1
+R2
+R0
+w1667256879
+8carrySaveAdder.v
+FcarrySaveAdder.v
+!i122 10
+L0 1 41
+R5
+r1
+!s85 0
+31
+!s108 1667256930.000000
+!s107 carrySaveAdder.v|
+!s90 -reportprogress|300|carrySaveAdder.v|
+!i113 1
+R6
+ncarry@save@adder
+vfullAdder
+!s110 1667144734
+!i10b 1
+!s100 8hz_CNXEgAWbXNlTcXhVM0
+R1
+IhbM4`zi`[`EME>VXW];Sf1
+R2
+R0
+w1667144717
+8fullAdder.v
+FfullAdder.v
+!i122 5
+L0 1 16
+R5
+r1
+!s85 0
+31
+!s108 1667144734.000000
+!s107 fullAdder.v|
+!s90 -reportprogress|300|fullAdder.v|
+!i113 1
+R6
+nfull@adder
+vhalfAdder
+!s110 1667144487
+!i10b 1
+!s100 oP_iL[MI?F:5LEL_QdZIX3
+R1
+IbNUzQ1njJcjX[GkdC?XVB0
+R2
+R0
+w1667144179
+8C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject1/projectFiles/halfAdder.v
+FC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject1/projectFiles/halfAdder.v
+!i122 2
+L0 1 8
+R5
+r1
+!s85 0
+31
+!s108 1667144487.000000
+!s107 C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject1/projectFiles/halfAdder.v|
+!s90 -reportprogress|300|C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject1/projectFiles/halfAdder.v|
+!i113 1
+R6
+nhalf@adder
+vRippleAdder
+!s110 1667258405
+!i10b 1
+!s100 825j822Aa6jDC]J@Fd8dE3
+R1
+I@P`6U1P4Z_PGEN^OHGWZC0
+R2
+R3
+w1667258403
+8RippleAdder.v
+FRippleAdder.v
+!i122 11
+R4
+R5
+r1
+!s85 0
+31
+!s108 1667258405.000000
+!s107 RippleAdder.v|
+!s90 -reportprogress|300|RippleAdder.v|
+!i113 1
+R6
+n@ripple@adder

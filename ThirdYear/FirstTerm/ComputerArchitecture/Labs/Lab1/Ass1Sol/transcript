@@ -1,0 +1,26 @@
+# Reading pref.tcl
+# OpenFile {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab1/Ass1Sol/encoder.v}
+do script.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:57:39 on Oct 16,2022
+# vlog -reportprogress 300 encoder.v 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 10:57:39 on Oct 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim encoder 
+# Start time: 10:57:39 on Oct 16,2022
+# Loading work.encoder
+# 
+#     "00000000"
+#     "00000001"
+#     "00000010"
+#     "00000100"
+#     "00001000"
+#     "00010000"
+#     "00100000"
+#     "01000000"
+#     "10000000"
+# 

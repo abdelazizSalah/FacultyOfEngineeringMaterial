@@ -1,0 +1,42 @@
+module boothMult (
+    multiplicand, 
+    multiplier, 
+    product
+) ;
+
+/// defining the inputs 
+input  [31:0] multiplicand, multiplier; 
+
+/// defining the outputs 
+output [64 :0] product ; // last bit for sign
+
+/// defining utility components 
+reg [31:0] accumlator, negMultiplier;
+assign negMultiplier = -multiplier; 
+reg q0 ; 
+reg n  ; /// this should be the count of how much shifts should be done;
+reg sign ; 
+always @(*) begin
+ negMultiplier = -multiplier; 
+ q0 = 0; 
+ n = 5'd32 ; /// this should be the count of how much shifts should be done;
+ sign = multiplicand[31]; 
+while (n > 0) begin
+    if({multiplier[0], q0} == 2'b01) begin 
+        // here we should add the negMultiplier to the accumlator
+        accumlator = accumlator + negMultiplier; 
+    end else if ({multiplier[0], q0} == 2'b01) begin 
+        // here we should add multiplier to the accumlator
+        accumlator = accumlator + multiplier; 
+    end
+    sign = accumlator[31]; 
+    {accumlator, multiplier, q0} = {accumlator, multiplier, q0} >> 1; 
+     accumlator[31] = sign;     
+    assign n = n - 1;
+end
+    
+ product[64] = sign; 
+ product[63:0] =!{accumlator, multiplier, q0} + 1;  
+end
+
+endmodule; 

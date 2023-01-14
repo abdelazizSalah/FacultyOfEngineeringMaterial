@@ -1,0 +1,13 @@
+# Reading pref.tcl
+# OpenFile {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab2/Ass2Sol/Task2TB.v}
+vsim -gui work.task1TB
+# vsim -gui work.task1TB 
+# Start time: 02:23:11 on Nov 05,2022
+# Loading work.task1TB
+# Loading work.regFileTask1
+# Loading work.register
+add wave *
+run
+run
+# End time: 02:24:01 on Nov 05,2022, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 0

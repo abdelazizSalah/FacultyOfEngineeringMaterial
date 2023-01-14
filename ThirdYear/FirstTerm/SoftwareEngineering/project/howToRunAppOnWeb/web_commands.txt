@@ -1,0 +1,3 @@
+1- flutter channel stable
+2- flutter upgrade
+3- flutter flutter config --enable-web

@@ -1,0 +1,12 @@
+{C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v} {0 {vlog -work work -stats=none {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ControlUnit
+** Error: C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v(46): (vlog-2163) Macro `OP_SUB is undefined.
+** Error: (vlog-13069) C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v(46): near ")": syntax error, unexpected ')'.
+** Error: (vlog-13069) C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v(50): near "else": syntax error, unexpected else.
+** Error: C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/controlUnit.v(52): (vlog-13205) Syntax error found in the scope following 'aluSignals'. Is there a missing '::'?
+
+} {4.0 8.0} {}} {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/defines.v} {1 {vlog -work work -stats=none {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/project/CodeImplementation/defines.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}}

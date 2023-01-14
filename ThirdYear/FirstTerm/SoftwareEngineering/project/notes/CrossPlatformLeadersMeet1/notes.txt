@@ -1,0 +1,54 @@
+1- el listing f kol community by5tlf mn wahed lel tany,
+ y3ny lw ana 3mlt sort f subriddet by hot msln w ft7t wahda tanya msh hl2eha hot
+ kol wahda fehom byb2a leha unique sort by.
+
+2- menus will be discarded.
+
+3- subriddets -> posts and about only. 
+
+4- ... next to search in any subriddet 
+	4.1- leave
+	4.2- share
+	4.3- message moderators/ contact mods
+	
+	remove -> the others will be discarded.
+
+
+5- we want to remove the add social link button in the users profiles.
+
+6- 3auzen nshel enna nshtghl f wahed 
+
+7- invite from the other users profiles -> todo 
+
+8- History is categorized -> not sorted -> todo.
+
+9- settings
+	9.1- Account Setting.
+		9.1.1- update email, change password, gender, country, manage notifications
+		9.1.2- connected accounts -> google, facebook
+		9.1.3- Blocking and permissions: manage blocked acconts, allow people to follow you 
+	9.2- auto play.
+	9.3- Home feed sort.
+
+10- dots of the post 
+	10.1- save 
+	10.2- hide
+	10.3- report
+	10.4- block account
+
+11- we need to discard the promoted. 
+
+12- comments sort
+	12.1- best
+	12.2- old
+	12.3- new
+	12.4- top
+
+13- Topics is added in the mod tools.
+
+14- we need to include the post flair. -> el mo3ed 3auzha -> in creating the post it is optional
+
+15- nfsw and spoiler are discarded or not? -> not discarded but nfsw without blur.
+
+16- el spam da y3ny wahed 3mal y3abat w ynzl hagat mlhash lazma, fa bnb3t lel moderator
+	w hwa by3ml review lw l2a enha spam fe3ln el mfrod el post yetms7

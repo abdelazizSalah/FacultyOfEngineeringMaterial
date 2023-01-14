@@ -1,0 +1,22 @@
+Add Post:
+   -Post:
+     inline code
+     spoiler
+     quate block
+     code block
+
+     *header
+     *image
+     *video
+
+   -darft
+
+   -add video:
+     gif
+     thumbnail
+
+User Page:
+   -Overview
+   -Awards Received
+
+Discover => Not exist

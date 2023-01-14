@@ -1,0 +1,169 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2
+vbooth
+!s110 1671047107
+!i10b 1
+!s100 =4c92?OB;>L7l5iKO92871
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IRC59P;EVoO=NDDGUEJN701
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1671047079
+8boothSecondTrial.v
+FboothSecondTrial.v
+!i122 46
+L0 1 92
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1671047106.000000
+!s107 boothSecondTrial.v|
+!s90 -reportprogress|300|boothSecondTrial.v|
+!i113 1
+Z4 tCvgOpt 0
+vbooth_multiplier
+!s110 1671797034
+!i10b 1
+!s100 8=YiET`9bL]ZF9XWh_Pd73
+R1
+IIZ:_hF_JDPMIWa5][LcYj3
+R2
+R0
+w1670968966
+8copy.v
+Fcopy.v
+!i122 72
+L0 1 115
+R3
+r1
+!s85 0
+31
+!s108 1671797034.000000
+!s107 copy.v|
+!s90 -reportprogress|300|copy.v|
+!i113 1
+R4
+vboth
+!s110 1672043750
+!i10b 1
+!s100 o?YJ@J1BGl^fX0A6=mU4m1
+R1
+I87=XTM1]19ZP9PAhmCN:z0
+R2
+R0
+w1672042763
+8booth32Seq.v
+Fbooth32Seq.v
+!i122 92
+Z5 L0 1 74
+R3
+r1
+!s85 0
+31
+!s108 1672043750.000000
+!s107 booth32Seq.v|
+!s90 -reportprogress|300|booth32Seq.v|
+!i113 1
+R4
+viiitb_r2_4bit_bm
+!s110 1671798520
+!i10b 1
+!s100 ]zZ]PF3B`0c2go0>?6EfD1
+R1
+IWjRJPZQT0[DHO@]9]Megl0
+R2
+R0
+w1671798496
+8C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/anotherTrial.v
+FC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/anotherTrial.v
+!i122 73
+R5
+R3
+r1
+!s85 0
+31
+!s108 1671798520.000000
+!s107 C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/anotherTrial.v|
+!s90 -reportprogress|300|-work|work|C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/VLSI/project/miniProject2/anotherTrial.v|
+!i113 1
+o-work work
+R4
+vRadix4BoothMultiplier
+!s110 1672056020
+!i10b 1
+!s100 ^g2cVWJKXEDYP7eKCfOhP3
+R1
+I=h[7Kee`Tj]WjS@Of<@Pc0
+R2
+R0
+w1672055956
+Z6 8seqRadix4Booth.v
+Z7 FseqRadix4Booth.v
+!i122 95
+L0 1 192
+R3
+r1
+!s85 0
+31
+!s108 1672056020.000000
+!s107 seqRadix4Booth.v|
+Z8 !s90 -reportprogress|300|seqRadix4Booth.v|
+!i113 1
+R4
+n@radix4@booth@multiplier
+vRadix4BoothMultiplierSeq
+Z9 !s110 1672057937
+!i10b 1
+!s100 YPT4KX[WAD5P3OoYzTEEM3
+R1
+IZ]f3jXTIhhAYaVED8Jg^g3
+R2
+R0
+Z10 w1672057790
+R6
+R7
+!i122 103
+L0 1 130
+R3
+r1
+!s85 0
+31
+Z11 !s108 1672057937.000000
+Z12 !s107 seqRadix4Booth.v|
+R8
+!i113 1
+R4
+n@radix4@booth@multiplier@seq
+vRadixboothMult
+R9
+!i10b 1
+!s100 `CDNRYObzI8YlZK1Rj>ea0
+R1
+ITBB9ObjNQGX_TH[jS6]BB3
+R2
+R0
+R10
+R6
+R7
+!i122 103
+L0 134 41
+R3
+r1
+!s85 0
+31
+R11
+R12
+R8
+!i113 1
+R4
+n@radixbooth@mult

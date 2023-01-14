@@ -1,0 +1,35 @@
+Setting seen from mobbile :
+General:
+	Account settings:
+	sub Futures  :
+			1-Basic setting: 
+			include : Update email address - Add password - country - Gender
+			exclude : Swich accounts -  change password when deleting accounts signed in with google/or any other
+
+			2-Connected Accounts:
+			include : Google - facebook
+			exclude : none
+
+			3-contact settings :
+			include : manage notifications : sub-includes (inbox message/chat messages/chat request [other teams], mentions, comments, upvotes to posts and comments, replies to your comments, new followers, cake day, mod notifications (reports to posts))
+
+			exclude : Manage emails
+			
+			4-Blocking And PERMISSIONS:
+			include : manage blocked accounts - Allow people to follow you
+			exclude : Allow chat requests - Allow direct messages
+	
+FEED options :
+	sort Home posts by: 
+	include : all
+	exclude : none
+
+View Options:
+	Autoplay:
+	include: always - never
+	exclude: when on wi-fi
+	
+	show NSFW content (iam over 18),Note:we exclude (Blur NSFW Images)
+	
+
+end mobile setting

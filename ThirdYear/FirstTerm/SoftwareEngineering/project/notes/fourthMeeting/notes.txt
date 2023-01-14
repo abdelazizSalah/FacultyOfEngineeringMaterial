@@ -1,0 +1,22 @@
+1- Abdelaziz:
+	1.1- login
+	1.2- signup
+	1.3- forget userName
+	1.4- forget password
+
+2- Atta: 
+	2.1- Post: Text, Img
+
+3- Sara:
+	3.1- drawer
+	3.2- posts categories
+	3.3- back to top button
+
+4- Haitham:
+	4.1- create post. (at least 40%)
+
+5- Yassine: 
+	5.1- Create community 
+	5.2- todo
+
+update community rules -> what is this? 

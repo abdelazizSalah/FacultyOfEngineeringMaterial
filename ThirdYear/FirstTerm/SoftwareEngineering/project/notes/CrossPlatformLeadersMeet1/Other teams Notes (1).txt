@@ -1,0 +1,29 @@
+Team 2:
+1-in Listing: - community sort post:should be saved type of post to retrive it when open this community again : will be to sdo 
+Team 3:
+1-home page:  - in community:there are  menue and predictions in some community not in other (FlutterDev) :except (will make posts and abount only)
+              - in community three dot menue : there are options not mentioned( share commmunity, Contact mods,...), only community info is mentioned : will to do (share - leave -contact mods)
+
+              - in userProfile: not Mention Add social link : except add social link
+              - when visit profile of others: send invitation to this person not mentioned : will be to do
+              - history: there are sorting on post(Recent, upvoted, Downvoted, Hidden): all 4 future will be to do (this feauture is actually categorize not sorted) 
+              - user setting: account setting belong to user system(team 1) : almost the same
+Team 4: 
+ 1-Post:      - each post has  different option in three dot menue : to do ( save - hide -report "spam" block)
+              -there are promoted post not mentioned (https://www.reddit.com/user/Pearson_BTEC/comments/y3vue2/apply_your_practical_skills_with_a_btec/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button) : except
+              - when click on post can sort comments( hot,new,best,....) : to do( best -top -new -old)
+
+
+
+2-moderation: -in community : mod Tools : not mentioned topics options: for discover & post flair: to do topics
+		- for flair in posts :add to do (topics ) : to do postflair
+
+              -flair:found in todo in back and web ,not found in mobile and not found in exclude
+              -access community setting in exclude in mobile : not found where it is in app? : not in mobile 
+              - mute:found in todo in back and web ,not found in mobile and not found in exclude
+              - avatar:
+              
+
+
+---------------------------------------------------------------------------
+new notes

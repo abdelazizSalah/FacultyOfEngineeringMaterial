@@ -1,0 +1,10 @@
+{C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab1/Ass1Sol/encoder.v} {2 {vlog -work work -stats=none {C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab1/Ass1Sol/encoder.v}
+** Warning: (vlog-14) Failed to open "C:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab1/Ass1Sol/encoder.mpf" specified by the MODELSIM environment variable.
+No such file or directory. (errno = ENOENT)
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module encoder
+
+Top level modules:
+	encoder
+
+} {} {}}

@@ -1,0 +1,33 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab1/Ass1Sol
+vencoder
+!s110 1665910659
+!i10b 1
+!s100 JAWA;_UCe^^cUQSdNzOMC2
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IbenNoIUo1:g<J63]deW_T0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665155954
+8encoder.v
+Fencoder.v
+!i122 25
+L0 1 21
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1665910659.000000
+!s107 encoder.v|
+!s90 -reportprogress|300|encoder.v|
+!i113 1
+tCvgOpt 0

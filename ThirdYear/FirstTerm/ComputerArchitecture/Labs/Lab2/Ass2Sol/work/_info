@@ -1,0 +1,217 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20115/Dropbox/My PC (LAPTOP-ILAL93NC)/Desktop/ThirdYear/FirstTerm/ComputerArchitecture/Labs/Lab2/Ass2Sol
+vregFileTask1
+!s110 1665910415
+!i10b 1
+!s100 jl<:Uzh?FdozBZ[DV[9`e0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<0:c9eAJgWeOfiMT@Oh[93
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665910319
+Z3 8Task1.v
+Z4 FTask1.v
+!i122 84
+L0 1 57
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1665910415.000000
+Z6 !s107 Task1.v|
+Z7 !s90 -reportprogress|300|Task1.v|
+!i113 1
+Z8 tCvgOpt 0
+nreg@file@task1
+vregFileTask1ad
+!s110 1665773326
+!i10b 1
+!s100 NoWX0;LRZ[Wn9I<OnWj]D3
+R1
+I5hDT0VEz:7aX^iO6RXl?00
+R2
+R0
+w1665773324
+R3
+R4
+!i122 60
+Z9 L0 1 61
+R5
+r1
+!s85 0
+31
+!s108 1665773326.000000
+R6
+R7
+!i113 1
+R8
+nreg@file@task1ad
+vregister
+!s110 1665773607
+!i10b 1
+!s100 haKK2Q7bK??[le8RVUFbW0
+R1
+IW_>9KdCdCWXkM2`mjDoO^3
+R2
+R0
+w1665773156
+8register.v
+Fregister.v
+!i122 65
+L0 1 30
+R5
+r1
+!s85 0
+31
+!s108 1665773607.000000
+!s107 register.v|
+!s90 -reportprogress|300|register.v|
+!i113 1
+R8
+vRegisterFileUsingArrayMap
+!s110 1665846637
+!i10b 1
+!s100 bIBlK2W1]OdOd<A4fRFog0
+R1
+Ihi4XZ0Cn>3M6IV9ZD_c4_3
+R2
+R0
+w1665846627
+8Task2.v
+FTask2.v
+!i122 81
+L0 1 41
+R5
+r1
+!s85 0
+31
+!s108 1665846636.000000
+!s107 Task2.v|
+!s90 -reportprogress|300|Task2.v|
+!i113 1
+R8
+n@register@file@using@array@map
+vtask1TB
+!s110 1665845816
+!i10b 1
+!s100 `Q75?XeRh3GVcgz3Ziael0
+R1
+Io7n]8bNd`YdKgjdnc1<480
+R2
+R0
+w1665845796
+8task1TB.v
+Ftask1TB.v
+!i122 79
+R9
+R5
+r1
+!s85 0
+31
+!s108 1665845816.000000
+!s107 task1TB.v|
+!s90 -reportprogress|300|task1TB.v|
+!i113 1
+R8
+ntask1@t@b
+vTask1Tb
+!s110 1665756955
+!i10b 1
+!s100 ;?UQQBMe[a0>_=jR=Bi8J2
+R1
+I7gXh?m>SRmb97JJ9]k7G:1
+R2
+R0
+w1665756954
+Z10 8Task2TB.v
+Z11 FTask2TB.v
+!i122 43
+Z12 L0 1 46
+R5
+r1
+!s85 0
+31
+!s108 1665756955.000000
+Z13 !s107 Task2TB.v|
+Z14 !s90 -reportprogress|300|Task2TB.v|
+!i113 1
+R8
+n@task1@tb
+vtask1WithForGenerateTB
+!s110 1665910423
+!i10b 1
+!s100 fPWeb_InMb;a1`CSA;lfB2
+R1
+I?ZgibINHDF;4@RE;iQ7MX3
+R2
+R0
+w1665847066
+8Task1Tb.v
+FTask1Tb.v
+!i122 85
+Z15 L0 1 62
+R5
+r1
+!s85 0
+31
+!s108 1665910423.000000
+!s107 Task1Tb.v|
+!s90 -reportprogress|300|Task1Tb.v|
+!i113 1
+R8
+ntask1@with@for@generate@t@b
+vtask2MemoryTB
+!s110 1665846993
+!i10b 1
+!s100 ag7`nnZ0EL[;IZ86O7ThX2
+R1
+I7i=:DGz70U6XE93PNQhT[0
+R2
+R0
+w1665846989
+8Task2TB
+FTask2TB
+!i122 83
+R15
+R5
+r1
+!s85 0
+31
+!s108 1665846992.000000
+!s107 Task2TB|
+!s90 -reportprogress|300|Task2TB|
+!i113 1
+R8
+ntask2@memory@t@b
+vTask2Tb
+!s110 1665756729
+!i10b 1
+!s100 PZ<Q6@b:WB@0eoHa:;g^a2
+R1
+I^>cHlQAj6E_l6JjUG3D7Z2
+R2
+R0
+w1665756725
+R10
+R11
+!i122 42
+R12
+R5
+r1
+!s85 0
+31
+!s108 1665756729.000000
+R13
+R14
+!i113 1
+R8
+n@task2@tb

@@ -1,0 +1,43 @@
+1- ehna keda hn3mlo android w desktop app
+2- Search Screens: 
+	2.1- when pressing on the search icon 
+	2.2- when inserting any search query
+	2.3- when pressing on search for ...
+		2.3.1- posts 
+		2.3.2- comments 
+		2.3.3- Communities
+		2.3.4- People
+
+3- Listing 
+	3.1 all the subriddet is only one main screen 
+	3.2 subriddet sort by (1- Hot, 2- New, 3-Top(may be can consider 
+								the listing of its from screen 
+									can be a new screen))
+	3.3 Posts and comments and about of each user
+	3.4 Comments of any post can be considered as listing screens-> and sorting of it.
+
+total screens are: 
+	2.1, 2.2, 2.3.1, 2.3.2, 2.3.3, 2.3.4,3.1,3.2.1,3.2.2,
+	3.3.3-> this can be considered as 
+	new screen also.
+	3.3 -> can be considered as three different screens.
+	3.4
+	
+
+
+side notes: 
+ 	- mfesh top 3ndna fl home ehna 3ndna fl settings -> 
+fahna keda hanshel el controversial bs.
+
+	- some subriddets will contain Menus and others will not.
+
+
+Conventions: 
+1- all variable names: camelCase 
+2- variable names are meaningful
+3- class names UpperCamelCases
+4- documtentation in the upper file 
+	4.1- /// for comments 
+	4.2- '' for strings 
+	4.3- @author should be included and then write your name after 
+	4.4- @date should be included.

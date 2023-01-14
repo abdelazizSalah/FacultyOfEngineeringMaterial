@@ -1,0 +1,28 @@
+1- snoojies btb2a gifs bdl ma hya png 
+2- group chats hatb2a s3ba lel backend wla eh r2yko -> ziad 
+
+3- Talks (not recommended)
+4- live chats (depending on the backend)
+5- han3ml el flairs wla laa -> es2l back -> bnst5dmha 34an el recommendations -> shabah el tags keda 
+6- ehna hansupport el reels s7? -> ask back
+7- styling the avatar eh r2yko feh? ehna bn recommend enna n7ot sowar gahza lakn mn3mlsh styling. 
+
+
+Searching 
+	- Subfeatures 
+		- search by text 
+		- search for posts 
+		- search for comments 
+		- search for communities 
+		- search for people 
+		- search for media 
+		- sorting by (all features) ->
+		- filtering (all time) 
+		- searching of communities (the name of the community should be a flair) and we should search inside the community only -> backend 
+explore all is easy ::
+
+Listing: 
+	- all features except: 
+		- the hot -> diffcult for the backend. 
+		- the duplicates. (optional)
+	
