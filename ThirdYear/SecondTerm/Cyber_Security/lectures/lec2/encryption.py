@@ -75,24 +75,46 @@
 # assert plainText == "wearediscoveredsaveyourself"
 
 # 2.2- Autokey Cipher
+# plainText = input("Enter the plain text: ")
+# plainText = plainText.lower()
+# key = input("Enter the key: ")
+# key = key.lower()
+
+# # generation of the keyStream
+# keyStream = key + plainText
+# keyStream = keyStream[: len(plainText)]
+# assert keyStream == "deceptivewearediscoveredsav"
+
+
+# # applying the encryption
+# cipherText = ""
+# for i in range(0, len(plainText)):
+#     # 2 34an el mfrod atr7 el ord bta3 el a mn kol wahda 34an lama agy a3ml el mod yetl3 el equation mzbota
+# cipherText += chr(((ord(plainText[i]) +
+#                     ord(keyStream[i])) - (2 * ord('a'))) % 26 + ord('a'))
+
+# cipherText = cipherText.upper()
+# print(cipherText)
+# assert cipherText == "ZICVTWQNGKZEIIGASXSTSLVVWLA"
+
+# 3- Vername Cipher
+import random
+import string
+
 plainText = input("Enter the plain text: ")
 plainText = plainText.lower()
-key = input("Enter the key: ")
-key = key.lower()
 
-# generation of the keyStream
-keyStream = key + plainText
-keyStream = keyStream[: len(plainText)]
-assert keyStream == "deceptivewearediscoveredsav"
 
+# generating a random keystream of the same length of the plainText
+keyStream = ''.join(random.choice(string.ascii_lowercase)
+                    for i in range(len(plainText)))
+assert len(keyStream) == len(plainText)
 
 # applying the encryption
 cipherText = ""
 for i in range(0, len(plainText)):
-    # 2 34an el mfrod atr7 el ord bta3 el a mn kol wahda 34an lama agy a3ml el mod yetl3 el equation mzbota
     cipherText += chr(((ord(plainText[i]) +
                         ord(keyStream[i])) - (2 * ord('a'))) % 26 + ord('a'))
 
 cipherText = cipherText.upper()
 print(cipherText)
-assert cipherText == "ZICVTWQNGKZEIIGASXSTSLVVWLA"
