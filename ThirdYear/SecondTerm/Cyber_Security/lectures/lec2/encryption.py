@@ -59,3 +59,17 @@ for i in range(0, len(plainText)):
 print(cipherText)
 cipherText = cipherText.upper()
 assert cipherText == "ZICVTWQNGRZGVTWAVZHCQYGLMGJ"
+
+# for decryption we just move in the reverse direction
+plainText = ""
+cipherText = cipherText.lower()
+for i in range(0, len(cipherText)):
+    # storing the position of the key in the columns
+    pos = ord(key[i]) - ord('a')
+    for j in range(0, 26):  # iterating till finding this letter
+        if alphabets2DMat[j][pos] == cipherText[i]:
+            # adding the corespoinding letter to the plainText.
+            plainText += chr(j + ord('a'))
+            break
+print(plainText)
+assert plainText == "wearediscoveredsaveyourself"
