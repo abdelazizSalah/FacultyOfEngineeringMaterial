@@ -98,23 +98,23 @@
 # assert cipherText == "ZICVTWQNGKZEIIGASXSTSLVVWLA"
 
 # 3- Vername Cipher
-import random
-import string
+# import random
+# import string
 
-plainText = input("Enter the plain text: ")
-plainText = plainText.lower()
+# plainText = input("Enter the plain text: ")
+# plainText = plainText.lower()
 
 
-# generating a random keystream of the same length of the plainText
-keyStream = ''.join(random.choice(string.ascii_lowercase)
-                    for i in range(len(plainText)))
-assert len(keyStream) == len(plainText)
+# # generating a random keystream of the same length of the plainText
+# keyStream = ''.join(random.choice(string.ascii_lowercase)
+#                     for i in range(len(plainText)))
+# assert len(keyStream) == len(plainText)
 
-# applying the encryption
-cipherText = ""
-for i in range(0, len(plainText)):
-    cipherText += chr(((ord(plainText[i]) +
-                        ord(keyStream[i])) - (2 * ord('a'))) % 26 + ord('a'))
+# # applying the encryption
+# cipherText = ""
+# for i in range(0, len(plainText)):
+#     cipherText += chr(((ord(plainText[i]) +
+#                         ord(keyStream[i])) - (2 * ord('a'))) % 26 + ord('a'))
 
-cipherText = cipherText.upper()
-print(cipherText)
+# cipherText = cipherText.upper()
+# print(cipherText)
