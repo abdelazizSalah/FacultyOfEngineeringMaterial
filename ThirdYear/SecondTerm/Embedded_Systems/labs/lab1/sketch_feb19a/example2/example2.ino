@@ -24,14 +24,14 @@ void setup() {
 
 void loop() {
   // if switch 1 is pressed turn on the led
-  if (PINB & (1<<PB1)){
+  if (PINB & (1<<PB1)){ // 00000010 
     PORTC = PORTC | (1<<PC0); 
     Serial.print("in");
   } else {
     PORTC = PORTC & (~(1<<PC0)); 
   }
    // not else because we want if both are pressed they should light. 
-   if (PINB & (1 << PB0)){
+   if (PINB & (1 << PB0)){ // 00000001
     PORTC = PORTC | (1<<PC1); 
   } else {
     PORTC = PORTC & (~(1<<PC1)); 

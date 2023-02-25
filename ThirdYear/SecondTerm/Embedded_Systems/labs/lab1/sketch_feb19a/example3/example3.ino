@@ -6,7 +6,6 @@
 #include <util/delay.h>
 void setup() {
   // set pin 0 in PORTB as input pin aand use the internal pull up resistor
-  PORTB = 0x00; 
   DDRB = DDRB & (~(1 <<PB0)); 
   PORTB = PORTB | (1 << PB0); 
 
@@ -19,11 +18,10 @@ void setup() {
 
 void loop() {
   if ((PINB & 0b00000001)  != 1) {
-    _delay_ms(100);
+    _delay_ms(100); 
     Serial.print("in");
     if((PINB & 0b00000001)!=1) { // if not working make it 1
       PORTC = PORTC ^ (1 << PC0);
-    
     Serial.print("dkhlt");
     }
   }
