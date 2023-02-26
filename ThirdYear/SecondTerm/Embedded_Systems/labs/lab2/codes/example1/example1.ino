@@ -5,7 +5,7 @@
 #include <avr/interrupt.h>
 
 ISR(INT0_vect) {
-// toggling the value of 3rd bit in portD
+// toggling the value of 3rd bit in portC
  PORTC = PORTC ^ (1 << PC0); 
 }
 
