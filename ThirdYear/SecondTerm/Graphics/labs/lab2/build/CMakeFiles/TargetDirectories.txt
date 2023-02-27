@@ -1,9 +1,4 @@
-C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/NightlyMemoryCheck.dir
-C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/Experimental.dir
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/lab2.dir
-C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/Continuous.dir
-C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/Nightly.dir
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/PACKAGE.dir
-C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/RUN_TESTS.dir
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/ALL_BUILD.dir
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/ZERO_CHECK.dir
