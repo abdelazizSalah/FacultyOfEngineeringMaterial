@@ -4,6 +4,9 @@
     <ClCompile Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab2\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab2\vendor\glad\src\gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab2\CMakeLists.txt" />
