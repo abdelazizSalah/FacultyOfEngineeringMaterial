@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab2\build\CMakeFiles\03f7083f6ea349d5f2daee27c51067df\Experimental.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab2\build\CMakeFiles\Experimental" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E5449772-B71E-3E58-B874-9463D2530E7D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
