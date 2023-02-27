@@ -2,3 +2,7 @@ C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/b
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/PACKAGE.dir
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/ALL_BUILD.dir
 C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/CMakeFiles/ZERO_CHECK.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/vendor/glfw/CMakeFiles/PACKAGE.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/vendor/glfw/CMakeFiles/ALL_BUILD.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/vendor/glfw/src/CMakeFiles/glfw.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab2/build/vendor/glfw/src/CMakeFiles/PACKAGE.dir
