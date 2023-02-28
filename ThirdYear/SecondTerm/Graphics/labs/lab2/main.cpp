@@ -12,6 +12,33 @@
  */
 #include <glad/gl.h> // this must be included before glfw3.h
 #include <GLFW/glfw3.h>
+
+GLuint load_shader(const std::string &path, GLenum shader_type)
+{
+    std::ifstream file(path);
+    std::string sourceCoder = std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
+    const char *source = sourceCoder.c_str();
+
+    GLuint shader = glCreateShader(shader_type);
+    glShaderSource(shader, 1, &source, NULL);
+    glCompileShader(shader);
+
+    GLint status;
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
+    if (status == GL_FALSE)
+    {
+        GLint infoLogLength;
+        glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &infoLogLength);
+        GLchar *strInfoLog = new GLchar[infoLogLength + 1];
+        glGetShaderInfoLog(shader, infoLogLength, NULL, strInfoLog);
+        std::cerr << "Compile failure in shader: " << strInfoLog << std::endl;
+        delete[] strInfoLog;
+        glDeleteShader(shader);
+        return 0;
+    }
+
+    return shader;
+}
 int main(int, char **)
 {
     if (!glfwInit())
@@ -33,6 +60,7 @@ int main(int, char **)
         glfwTerminate();
         return -1;
     }
+
     //  keda openGL lama yegy ye3ml load ll functions bt3to, ht7otha 3la el new glfw window el ana lsa 3amlha ceration.
     // btb2a mohema awy lw hn3ml kza window
     glfwMakeContextCurrent(window);      // make the context of our window the main context on the current thread
@@ -43,6 +71,21 @@ int main(int, char **)
         glfwDestroyWindow(window);
         return -2;
     }
+    // this create the program to be used in the GPU
+    GLuint program = glCreateProgram(); // hena bn3ml program
+
+    // this is how we load the created shaders
+    GLuint vs = load_shader("assets/shaders/simple.vert", GL_VERTEX_SHADER);
+    GLuint fs = load_shader("assets/shaders/simple.frag", GL_FRAGMENT_SHADER);
+
+    // this is how we attach the shaders to the program
+    glAttachShader(program, vs);
+    glAttachShader(program, fs);
+
+    // we now after attaching them, we don't need them anymore
+    glDeleteShader(vs);
+    glDeleteShader(fs);
+
     // main loop
     while (!glfwWindowShouldClose(window))
     {
@@ -57,6 +100,9 @@ int main(int, char **)
         glClear(GL_COLOR_BUFFER_BIT); // hena bnms7o  fe3ln
 
         // draw something
+        glUseProgram(program);
+        glBindVertexArray(vertex_array);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
 
         // swap buffers
         glfwSwapBuffers(window);
