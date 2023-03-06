@@ -101,7 +101,7 @@ int main(int, char **)
 
         // draw something
         glUseProgram(program);
-        glBindVertexArray(vertex_array);
+        glBindVertexArray(&vertex_array);
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
         // swap buffers
