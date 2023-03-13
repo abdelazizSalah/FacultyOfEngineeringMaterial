@@ -68,15 +68,12 @@
   * glUniform1f(location, value to be sent) -> this means that we are dealing with 1 uniform variable with datatype float 
   * then we send to it the return from glGetUniformLocation
   * then we send to it the value we want to place in this location.
-## Attribute data 
-* 
-
 ## By these knowleadge, now we can draw things rather than the triangle:
 * we can draw rectangle by sending only 4 points, and tell the vertex shader to combine each 3 points together
 * star by drawing two opposite triangles.
 
 
-## important note: 
+## important notes: 
 1. any attribute that we are going to define should have data type GLuint
 2. glGenBuffer -> appreviaton for gl generate buffer, it has two attributes 
    1. number of buffers to be generated 
@@ -101,8 +98,13 @@
    4. whethere the data should be normalized or not.
    5. the stride (space between consecutive atteributes)
    6. the offset of the first element.
-7. glDrawElements() this is the function used for drawing, it has 4 attributes 
+7. glDrawArray() this is the function used for drawing, it has 4 attributes  - in case that we have explicitly defined all number of elements alone (6 verticies for rectangle not 4 only)
    1. the type of the element to be drawn (point, line or triangle)
    2. number of points to be drawn
    3. data type
+   4. index of the start
+8. glDrawElements() this is the function used for drawing points which are relative to each other, in  certain sequence, it takes 4 attributes 
+   1. the type of element to be drawn (GL_TRIANGLES OR WHAT)
+   2. the number of points to be drawn ( even if you have 4 verticies you draw 6 points)
+   3. the data type for each element
    4. index of the start

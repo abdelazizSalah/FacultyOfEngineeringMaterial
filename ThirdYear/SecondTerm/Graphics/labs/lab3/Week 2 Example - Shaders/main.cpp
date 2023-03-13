@@ -119,19 +119,9 @@ int main()
     vertex vertcies[4] = {
         {{-0.5, -0.5, 0.0}, {255, 0, 0, 1}},
         {{0.5, -0.5, 0.0}, {0, 255, 0, 1}},
-        {{0.5, 0.5, 0.0}, {0, 0, 255, 1}},
-        {{-0.5, 0.5, 0.0}, {255, 255, 0, 1}}};
-    uint16_t elements[6] = {0, 1, 2, 3, 1, 2}; // hena b2olo khod el points 0, 1, 2 w e3ml behom mosls, w el element 3 w 1 w 2 e3ml behom mosls kman
-    GLuint element_buffer;
-    // defingin a new buffer -> count , pointer to the buffer
-    glGenBuffers(1, &element_buffer);
-
-    // binding the name
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
-
-    // the binded data, the size of the data, the data, the usage of the data
-    /// GL_STATIC_DRAW: the data will not change at all or very rarely.
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(uint16_t), elements, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
+        {{-0.5, 0.5, 0.0}, {0, 0, 255, 1}},
+        {{0.5, 0.5, 0.0}, {255, 255, 0, 1}}};
+    uint16_t elements[6] = {3, 1, 2, 0, 1, 3}; // hena b2olo khod el points 0, 1, 2 w e3ml behom mosls, w el element 3 w 1 w 2 e3ml behom mosls kman
 
     /*
     /////////////////////////////////////////
@@ -147,7 +137,18 @@ int main()
 
     // the binded data, the size of the data, the data, the usage of the data
     /// GL_STATIC_DRAW: the data will not change at all or very rarely.
-    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(vertex), vertcies, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
+    glBufferData(GL_ARRAY_BUFFER, 4 * sizeof(vertex), vertcies, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
+
+    GLuint element_buffer;
+    // defingin a new buffer -> count , pointer to the buffer
+    glGenBuffers(1, &element_buffer);
+
+    // binding the name
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
+
+    // the binded data, the size of the data, the data, the usage of the data
+    /// GL_STATIC_DRAW: the data will not change at all or very rarely.
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(uint16_t), elements, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
 
     GLuint vertex_array;
     /// bb3tlo el 3dd el 3auz a3mlo create (hena h3ml 1 bs) , w el mkan el y7ot feh el data (vertex array address)
@@ -192,9 +193,10 @@ int main()
 
         glUseProgram(program);
         glBindVertexArray(vertex_array);
-
         // draw triangle
-        glDrawArrays(GL_TRIANGLES, 0, 6); //
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, 0); // this is used to draw the normal case
+
+        // glDrawArrays(GL_TRIANGLES, 0, 4); // this is used to draw the normal case
         // glUniform1f(time_loc, time);
         // glDrawArrays(GL_TRIANGLES, 0, 3);
         // glUniform1f(time_loc, time + 0.5);
