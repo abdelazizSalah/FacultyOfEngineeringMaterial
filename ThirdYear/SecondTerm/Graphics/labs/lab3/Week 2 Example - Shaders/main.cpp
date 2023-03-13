@@ -104,10 +104,16 @@ int main()
     //     -0.5, -0.5, 0.0, 0.4, 0.2, 0.9, 1, // contain (x pos, y pos, z pos)
     //     0.5, -0.5, 0.0, 0.1, 0.5, 0.2, 1,
     //     0.5, 0.5, 0.0, 0.3, 0.3, 0.6, 1};
-    vertex vertcies[3] = {
+    vertex vertcies[6] = {
         {{-0.5, -0.5, 0.0}, {255, 0, 0, 1}}, // contain (x pos, y pos, z pos)
         {{0.5, -0.5, 0.0}, {0, 255, 0, 1}},
-        {{0.0, 0.5, 0.0}, {0, 0, 255, 1}}};
+        {{-0.5, 0.5, 0.0}, {0, 0, 255, 1}},
+
+        {{0.5, 0.5, 0.0}, {255, 0, 255, 1}}, // contain (x pos, y pos, z pos)
+        {{0.5, -0.5, 0.0}, {0, 255, 0, 1}},
+        {{-0.5, 0.5, 0.0}, {255, 0, 255, 1}}
+
+    };
     /*
         /////////////////////////////////////////
         defining buffers
@@ -122,7 +128,7 @@ int main()
 
     // the binded data, the size of the data, the data, the usage of the data
     /// GL_STATIC_DRAW: the data will not change at all or very rarely.
-    glBufferData(GL_ARRAY_BUFFER, 3 * sizeof(vertex), vertcies, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
+    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(vertex), vertcies, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
 
     GLuint vertex_array;
     /// bb3tlo el 3dd el 3auz a3mlo create (hena h3ml 1 bs) , w el mkan el y7ot feh el data (vertex array address)
@@ -166,7 +172,7 @@ int main()
         glBindVertexArray(vertex_array);
 
         // draw triangle
-        glDrawArrays(GL_TRIANGLES, 0, 3); //
+        glDrawArrays(GL_TRIANGLES, 0, 6); //
         // glUniform1f(time_loc, time);
         // glDrawArrays(GL_TRIANGLES, 0, 3);
         // glUniform1f(time_loc, time + 0.5);
