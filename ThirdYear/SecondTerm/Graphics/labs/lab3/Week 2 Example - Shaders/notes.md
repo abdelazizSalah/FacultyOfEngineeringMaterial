@@ -72,3 +72,37 @@
 * 
 
 ## By these knowleadge, now we can draw things rather than the triangle:
+* we can draw rectangle by sending only 4 points, and tell the vertex shader to combine each 3 points together
+* star by drawing two opposite triangles.
+
+
+## important note: 
+1. any attribute that we are going to define should have data type GLuint
+2. glGenBuffer -> appreviaton for gl generate buffer, it has two attributes 
+   1. number of buffers to be generated 
+   2. refrence pointer to the buffers locations.
+3. after generating any buffer we need to bind it, to do so we use **glBindBuffer** it also has two attributes 
+   1. the new name -> GL_ARRAY_BUFFER
+   2. the generated buffer (GLuint object which you send to the glGenBuffer)
+4. glBufferData() is the function used to send the data, it has 4 attributes 
+   1. name of the bind array (GL_ARRAY_BUFFER)
+   2. size (in bytes) of the sent data
+   3. the data to be sent
+   4. whether the data is going to change alot or not, if not we use GL_STATIC_DRAW
+5. glEnableVertexAttribArray() this is the function used to enable certain attribute defined as **in** in any of the shaders , it has single attribute
+   1. the index defined in the shader, to get this index we have 2 ways 
+      1. to define it by ourselfs by going to the shader and writing before it (layout (location  = x )) and set x to the value we want
+      2. to get the automatic location by calling this function.
+   > **glGetAttribLocation** (program, 'attributeExactName').
+6. glVertexAttribPointer() this is used to send the data to this attribute, and it has 4 attributes 
+   1. the idx return from glGetAttLocation or the predefined one.
+   2. number of elements to be sent
+   3. data type of these elements
+   4. whethere the data should be normalized or not.
+   5. the stride (space between consecutive atteributes)
+   6. the offset of the first element.
+7. glDrawElements() this is the function used for drawing, it has 4 attributes 
+   1. the type of the element to be drawn (point, line or triangle)
+   2. number of points to be drawn
+   3. data type
+   4. index of the start

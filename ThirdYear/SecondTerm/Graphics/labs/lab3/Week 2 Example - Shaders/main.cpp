@@ -104,23 +104,42 @@ int main()
     //     -0.5, -0.5, 0.0, 0.4, 0.2, 0.9, 1, // contain (x pos, y pos, z pos)
     //     0.5, -0.5, 0.0, 0.1, 0.5, 0.2, 1,
     //     0.5, 0.5, 0.0, 0.3, 0.3, 0.6, 1};
-    vertex vertcies[6] = {
-        {{-0.4, -0.26, 0.0}, {255, 0, 0, 1}},
-        {{0.4, -0.26, 0.0}, {255, 0, 0, 1}},
-        {{0.0, 0.5, 0.0}, {255, 0, 0, 1}},
+    //////////////////////////////////////////////
+    /////// vertcies for drawing a star
+    /////// vertex vertcies[6] = {
+    ///////     {{-0.4, -0.26, 0.0}, {255, 0, 0, 1}},
+    ///////     {{0.4, -0.26, 0.0}, {255, 0, 0, 1}},
+    ///////     {{0.0, 0.5, 0.0}, {255, 0, 0, 1}},
+    ///////
+    ///////     {{0.4, 0.26, 0.0}, {255, 0, 0, 1}},
+    ///////     {{-0.4, 0.26, 0.0}, {255, 0, 0, 1}},
+    ///////     {{0.0, -0.5, 0.0}, {255, 0, 0, 1}}
+    /////// };
+    /////////////////////////////////////////////////
+    vertex vertcies[4] = {
+        {{-0.5, -0.5, 0.0}, {255, 0, 0, 1}},
+        {{0.5, -0.5, 0.0}, {0, 255, 0, 1}},
+        {{0.5, 0.5, 0.0}, {0, 0, 255, 1}},
+        {{-0.5, 0.5, 0.0}, {255, 255, 0, 1}}};
+    uint16_t elements[6] = {0, 1, 2, 3, 1, 2}; // hena b2olo khod el points 0, 1, 2 w e3ml behom mosls, w el element 3 w 1 w 2 e3ml behom mosls kman
+    GLuint element_buffer;
+    // defingin a new buffer -> count , pointer to the buffer
+    glGenBuffers(1, &element_buffer);
 
-        {{0.4, 0.26, 0.0}, {255, 0, 0, 1}},
-        {{-0.4, 0.26, 0.0}, {255, 0, 0, 1}},
-        {{0.0, -0.5, 0.0}, {255, 0, 0, 1}}
+    // binding the name
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
 
-    };
+    // the binded data, the size of the data, the data, the usage of the data
+    /// GL_STATIC_DRAW: the data will not change at all or very rarely.
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(uint16_t), elements, GL_STATIC_DRAW); // da el data el ana 3auz ab3tha w b2olo hast5dmha ezay.
+
     /*
-        /////////////////////////////////////////
-        defining buffers
-        /////////////////////////////////////////
-        3ndna 7aga esmha bind, de bdl ma kol mara agy a3ml call l function, lazm ab3t a2olaha ana btklm 3la men
-        laa ana h3ml bind b7es a2ol wlahy ay operation ana h3mlha mn b3d el line da hayb2a 3la el buffer el folany.
-    */
+    /////////////////////////////////////////
+    defining buffers
+    /////////////////////////////////////////
+    3ndna 7aga esmha bind, de bdl ma kol mara agy a3ml call l function, lazm ab3t a2olaha ana btklm 3la men
+    laa ana h3ml bind b7es a2ol wlahy ay operation ana h3mlha mn b3d el line da hayb2a 3la el buffer el folany.
+*/
     GLuint vertex_buffer;
     glGenBuffers(1, &vertex_buffer); // creating a buffer
     // binding the name
@@ -153,6 +172,9 @@ int main()
     glEnableVertexAttribArray(clrs); // enable the attribute
     glVertexAttribPointer(clrs, 4, GL_UNSIGNED_BYTE, true, sizeof(vertex), (void *)offsetof(vertex, col));
     ///////////////////////////
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
+    glBindVertexArray(0); // unbinding the name
+
     // GLuint time_loc = glGetUniformLocation(program, "time");
     // std::cout << "time_loc: " << time_loc << std::endl;
 

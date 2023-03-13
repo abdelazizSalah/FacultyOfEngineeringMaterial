@@ -35,21 +35,3 @@ void main() {
     // vertex_color = colors[gl_VertexID]; // gl_vertexID is a variable that is automatically set by opengl. it is the index of the vertex in the array.
     vertex_color = colors; // gl_vertexID is a variable that is automatically set by opengl. it is the index of the vertex in the array.
 }
-
-// void main () {
-//     // now we will get the verticies from the main.cpp file
-    
-//     // we send only 3 colors, which indicates the corners colors,
-//     // then the gl itself apply an interpolation to be able to get 
-//     // the colors of the remaining pixels in the triangle.
-//     // const vec4 colors[3] = vec4[3] (
-//     //     vec4(1.0, 0.0, 0.0,1.0),
-//     //     vec4(0.0, 1.0, 0.0,1.0),
-//     //     vec4(0.0, 0.0, 1.,1.0) // mayten el komma, lw 7tet hena comma hayfr23 fwshk
-//     // );
-
-//     // // to be able to make it move in a circle we add time to both x and y
-//     // // gl_Position = vec4(position[gl_VertexID] + vec3(sin(time), cos(time), 0.0), 1.0);
-    // gl_Position = vec4(position[gl_VertexID] , 1.0);
-//     // vertex_color = colors[gl_VertexID]; // gl_vertexID is a variable that is automatically set by opengl. it is the index of the vertex in the array.
-// }
