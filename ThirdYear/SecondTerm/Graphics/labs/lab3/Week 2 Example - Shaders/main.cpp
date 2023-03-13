@@ -105,9 +105,9 @@ int main()
     //     0.5, -0.5, 0.0, 0.1, 0.5, 0.2, 1,
     //     0.5, 0.5, 0.0, 0.3, 0.3, 0.6, 1};
     vertex vertcies[3] = {
-        {{-0.5, -0.5, 0.0}, {0.4, 0.2, 0.9, 1}}, // contain (x pos, y pos, z pos)
-        {{0.5, -0.5, 0.0}, {0.1, 0.5, 0.2, 1}},
-        {{0.5, 0.5, 0.0}, {0.3, 0.3, 0.6, 1}}};
+        {{-0.5, -0.5, 0.0}, {255, 0, 0, 1}}, // contain (x pos, y pos, z pos)
+        {{0.5, -0.5, 0.0}, {0, 255, 0, 1}},
+        {{0.0, 0.5, 0.0}, {0, 0, 255, 1}}};
     /*
         /////////////////////////////////////////
         defining buffers
@@ -134,16 +134,16 @@ int main()
     // 1- the index of the attribute in the vertex shader
     // 2- the number of components in the attribute
     // 3- the type of the components
-    // 4- whether the data should be normalized
+    // 4- whether the data should be normalized -> it divides all the values by the maximum value of the type
     // 5- the stride (the space between consecutive attributes) -> += 3 akno fl for loop kol khatwa hayt7rk 3
     // 6- the offset of the first component -> void pointer
-    GLuint pos_loc = glGetAttribLocation(program, "position");
-    // GLuint pos_loc = 0;
+    // GLuint pos_loc = glGetAttribLocation(program, "position");
+    GLuint pos_loc = 0;
     glEnableVertexAttribArray(pos_loc); // enable the attribute
     glVertexAttribPointer(pos_loc, 3, GL_FLOAT, true, sizeof(vertex), 0);
 
-    GLuint clrs = glGetAttribLocation(program, "colors");
-    // GLuint clrs = 1;                 // l2n ana msbto already mn gowa m3rf en dayman da hykon el address location bta3 el color
+    // GLuint clrs = glGetAttribLocation(program, "colors");
+    GLuint clrs = 1;                 // l2n ana msbto already mn gowa m3rf en dayman da hykon el address location bta3 el color
     glEnableVertexAttribArray(clrs); // enable the attribute
     glVertexAttribPointer(clrs, 4, GL_UNSIGNED_BYTE, true, sizeof(vertex), (void *)offsetof(vertex, col));
     ///////////////////////////
