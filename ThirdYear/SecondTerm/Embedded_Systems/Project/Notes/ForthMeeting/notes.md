@@ -7,7 +7,7 @@ el ehna wslenlo
 requirements el fatra el gaya 
 1. enna n3ml detection ll 3rbya
 2. enna ne3ml detection ll curves w nb3t el direction el s7 ll 3rbya 
-3. nesr3 el frames per second el bttb3t mn el 
+3. nesr3 el frames per second el bttb3t mn el mobile ll 3rbya. 
 --------
 1. 34an ne7dd el point mmkn n3ml nfs tre2t el corner detection eny agy 3nd el curves w a3ml check hal de corner wla laa, w lw tl3tly no2at ktera still mmkn akhud awl no2ta bs, w 34an n3ml keda mmkn nro7  nzwd el distance.
 2. aw enna ne3ml detect l makan el 3rbya, w ashof odamy ad a khat eswed, lw el msafa de aktur mn de3fen el 3rbya msln 5las 5lena mashyen bsor3a.
@@ -18,3 +18,6 @@ requirements el fatra el gaya
 1. Abdelaziz -> curves detection. 
 2. Haitham -> car and direction detection.
 3. Amr -> frames per seconds enhancment. 
+---------
+## DDL 
+Um el 7ad. 
