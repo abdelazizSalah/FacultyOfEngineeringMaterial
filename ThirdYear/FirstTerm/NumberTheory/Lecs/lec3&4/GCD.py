@@ -79,7 +79,7 @@ def recersiveEcludieAlgo(a, b):
     return recersiveEcludieAlgo(b, a % b)
 
 
-print(recersiveEcludieAlgo(54320543590223053250, 7))
+print("759 % 41 = " + str(recersiveEcludieAlgo(759, 41)))
 print(recersiveEcludieAlgo(54320543590223053250, 1453234276239426509362))
 
 
@@ -88,6 +88,15 @@ print(recersiveEcludieAlgo(54320543590223053250, 1453234276239426509362))
 # so this function is used to return this two integers and return the gcd too
 def extended_gcd(a, b):
     assert a >= b and b >= 0 and a+b > 0
+    if b == 0:
+        d, x, y = a, 1, 0
+    else:
+        (d, p, q) = extended_gcd(b, a % b)
+        x = q
+        y = p - q * (a // b)
+    assert a % d == 0 and b % d == 0
+    assert d == a * x + b * y
+    return (d, x, y)
 
 
 # print(extended_gcd(391, 299))
