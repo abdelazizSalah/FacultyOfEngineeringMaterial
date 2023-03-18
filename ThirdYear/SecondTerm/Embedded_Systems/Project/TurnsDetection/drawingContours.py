@@ -44,6 +44,7 @@ def findBoundingRectangleArea(img, contours):
 # this will need to be dynamicly evaluated to get the image.
 # we will not need to process the road every time, we will just need to process the image once.
 img = cv2.imread('./images/roads/road1.jpg', cv2.IMREAD_UNCHANGED)
+img = cv2.imread('./images/roads/road1.jpg', cv2.IMREAD_UNCHANGED)
 
 # convert img to grey
 img_grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
