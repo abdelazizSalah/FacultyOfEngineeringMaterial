@@ -26,3 +26,9 @@ However, the authors also identified several challenges and open issues that nee
 
 Conclusion:
 In conclusion, privacy and security in cloud computing are critical issues that require continuous attention and research. This survey has provided an overview of recent advances and future directions in this field, which can guide researchers and practitioners in developing more effective and efficient solutions to protect data in the cloud. However, there are still several challenges and open issues that need to be addressed, such as the trade-off between security and performance, the need for standardization and certification, and the impact of emerging technologies. Addressing these challenges and open issues will enable the adoption of cloud computing while ensuring the privacy and security of data.
+
+## My Paper link
+https://ieeexplore.ieee.org/document/8726303
+
+## Excel sheet link 
+https://docs.google.com/spreadsheets/d/1lVhIeANdDwYKJzCBf8CX2g9fVaDmtYLEggS7id9-gPE/edit#gid=0
