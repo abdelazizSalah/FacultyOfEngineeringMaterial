@@ -54,8 +54,12 @@ ret, thresh_img = cv2.threshold(img_grey, thresh, 255, cv2.THRESH_BINARY)
 # find contours
 contours, hierarchy = cv2.findContours(
     thresh_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+# drawing contours
+cv2.drawContours(img, contours, -1, (0, 255, 0), 3)
+cv2.imshow('Image', img)
+cv2.waitKey(0)
 
-# create an empty image for contours
-img_contours = np.zeros(img.shape)
+# # create an empty image for contours
+# img_contours = np.zeros(img.shape)
 
-findBoundingRectangleArea(img, contours)
+# findBoundingRectangleArea(img, contours)
