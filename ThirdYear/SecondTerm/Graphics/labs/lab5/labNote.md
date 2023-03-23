@@ -137,4 +137,39 @@
 6. Frame buffer -> el buffer el 3ndna 3la el screen. 
 > we can only write vertex shader or fragment shader.
 ----------
+### Uniform
+ > this is a dynamic data, sent from the cpp file to the shader, to be able to change the data we wanna send from the cpp, to avoid hardcoding.   
+
+1. lw 3ndna 1D we use **glUniform1f**
+1. lw 2D bnst5dm **glUniform2f**
+1. w f 34an float. 
+1. lw int hyb2a i -> no templates or overloading functions. 
+2. 34an ngeb el location bta3 el uniform bnst5dm function esmha 
+3. glGetUniformLocation(program, uniformName)
+---------
+### Baricentric Coordinates.
+1. 34an y3rf el values elly fl nos ben el triangle verticies, fa hwa by3ml interpolation, fa 34an ye7sbha, bygeb area of small triangle over area of larger triangle. 
+2. el quiz hyb2a 3ala el goz2 da ghaleban. 
+--------
+### Project Notes: 
+1. phase 1 are sequential tasks. 
+2. so we need to make sure that the tasks are done in the right order.
+3. documentation is very important.
+4. our project is building a game engine, over it we build a game. 
+
+
+-------
+### Resource Acuisition Is Initialization (RAII):
+1. da mushkelt enk t3ml leakage fl memory, w da byb2a bsbb en el hagat de fl cpp wl c btb2a manual fanta momken tensa w kda. 
+2. fa 34an t avoid da mmkn t3ml class mas2ol 3n el mwdo3 da.
+3. awl ma ye7slo creation, hwa by3ml resource allocation (acuisition).
+4. w lama ye5ls el scope bta3o y2om 3aml delete (destruction).
+5. fa keda enta bt7afz 3la el memory safty. 
+6. bs fe shart 
+7. en el object da myt3mlosh copy. 
+8. w da 34an lw wahed fehom mat, fa hwa hy2fl el file, fa el tany hyb2a m3ah adress bayz. 
+----------
+### Writing Code Notes: 
+
+
 
