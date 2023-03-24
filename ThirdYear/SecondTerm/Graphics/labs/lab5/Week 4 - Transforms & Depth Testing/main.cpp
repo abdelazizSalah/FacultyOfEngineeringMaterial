@@ -174,10 +174,16 @@ int main()
         for (int i = -10; i <= 10; i++)
         {
             /// M -> el location bta3 el elements.
+            /// awl parameter da bykon identity matrix ana 3mlo dummy, w el translate bb3tlha el 3 arkam el 3auz a7rk
+            /// behom el oject, w hya btrg3ly el result b3d ma btdrbhom fb3d.
+            /// w awl parameter bykon 4x4 matrix 34an ne2dr enna b matrix wahda n3ml apply lel 3 operations.
             glm::mat4 ModelLocation = glm::translate(glm::mat4(1.0f), glm::vec3(0.0, 0.0, (float)i));
+            ///                                   4x4 matrix        angle ,        axis
+            glm::mat4 ModelRotation = glm::rotate(ModelRotation, time * 0.5f, glm::vec3(1.0, 0.0, 1.0));
+            /// scale
 
             /// MVP = Model View Projection
-            glm::mat4 MVP = PrespectiveView * View * ModelLocation;
+            glm::mat4 MVP = PrespectiveView * View * ModelRotation;
 
             /// hena bnb3t uniform no3o matrix 7agmo 4x4 w v (vector) da m3naha eny mmkn ab3t kaza element fe nfs el w2t.
             ///  mvp_loc-> fa bb3tlo mkan el uniform bta3y
