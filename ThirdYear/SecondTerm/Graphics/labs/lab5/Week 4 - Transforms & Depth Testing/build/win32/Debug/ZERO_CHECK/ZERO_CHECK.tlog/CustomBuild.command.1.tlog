@@ -1,0 +1,10 @@
+^C:\GITHUB\FACULTYOFENGINEERINGMATERIAL\THIRDYEAR\SECONDTERM\GRAPHICS\LABS\LAB5\WEEK 4 - TRANSFORMS & DEPTH TESTING\BUILD\CMAKEFILES\5E5079472F4A4DBB821BEAB289539BAF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing" "-BC:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build/gfx_lab.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

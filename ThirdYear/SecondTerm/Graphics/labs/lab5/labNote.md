@@ -50,7 +50,7 @@
    5. lakn hwa bate2 w mokalef
 2. 2 Samples per pixel **(2xMSAA)**
    1. de el by7sl en kol pixel by2smha nosen 
-   2. w kol nos byshof hwa mt8aty wla laa, lw ah 
+   2. w kol nos byshof hwa mt8aty wla laa
       1. lw ah fa by7sblo el shader w y7oto fo2
       2. lw laa fa khalas msh hy7ot 3leh haga
    3. lw el no2tten mt8tyen, by7sbo mra wahda w y7oto fo2hom homa el etnen
@@ -73,6 +73,7 @@
 4. el fragment shader mn aktur el hagat el bta5ud calculations w t2el. 
 -------
 ## MSAA 
+> abbreviation for Multi-Sample Anti-Aliasing
 ### pors 
 1. Fast and hardware supproted
 2. Good result without blurring the whole scene. 
@@ -103,7 +104,7 @@
 1. 1 bit -> 2 values
 2. kol ma el bits zadet kol ma edrt ageb shades a7sn.
 3. 8 bits are usually enough.
-4. kol bit bn3mlha representation b 8 bits. 
+4. kol pixel bn3mlha representation b 8 bits. 
 -------------
 ### Refresh rate
 1. 60hz -> 60 frames per second
@@ -131,8 +132,14 @@
 ### Pipeline
 1. Vertex Data -> mgmo3t el pixels el 3auz arsmha
 2. Vertex Shader -> el mas2ol 3n el t3amol m3 el vertcies. 
+   1. we define the main 3 vertcies only here for triangle for example. 
 3. Primitive assembly -> bygm3 kol 3 verticies m3 b3d.
+   1. ehna fl vertex shader 7adedna el main 3 points bto3 el triangle,
+   2. lakn fl primitive assembly baa hwa bymkl ba2y el no2at btaa3t el triangle 34an ye2dr eno yersmha 3la 
+   3. el shasha w yetl3 triangle kamel.
 4. Rasterization -> by3ml el 3d effect.
+   1. the process by which a primitive is converted to a two-dimensional image. 
+   2. bya5ud el shakl bta3k el enta 7adedto fe el primitve assembly w yebd2 y7aded el pixels baa
 5. Fragment Shader -> mas2ol 3n alwan el pixels el 3auz arsmha.
 6. Frame buffer -> el buffer el 3ndna 3la el screen. 
 > we can only write vertex shader or fragment shader.
@@ -141,11 +148,11 @@
  > this is a dynamic data, sent from the cpp file to the shader, to be able to change the data we wanna send from the cpp, to avoid hardcoding.   
 
 1. lw 3ndna 1D we use **glUniform1f**
-1. lw 2D bnst5dm **glUniform2f**
-1. w f 34an float. 
-1. lw int hyb2a i -> no templates or overloading functions. 
-2. 34an ngeb el location bta3 el uniform bnst5dm function esmha 
-3. glGetUniformLocation(program, uniformName)
+2. lw 2D bnst5dm **glUniform2f**
+3. w f 34an float. 
+4. lw int hyb2a i -> no templates or overloading functions. 
+5. 34an ngeb el location bta3 el uniform bnst5dm function esmha 
+6. glGetUniformLocation(program, uniformName)
 ---------
 ### Baricentric Coordinates.
 1. 34an y3rf el values elly fl nos ben el triangle verticies, fa hwa by3ml interpolation, fa 34an ye7sbha, bygeb area of small triangle over area of larger triangle. 
