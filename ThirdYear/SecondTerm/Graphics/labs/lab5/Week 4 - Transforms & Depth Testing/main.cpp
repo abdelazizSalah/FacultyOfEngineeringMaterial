@@ -178,12 +178,25 @@ int main()
             /// behom el oject, w hya btrg3ly el result b3d ma btdrbhom fb3d.
             /// w awl parameter bykon 4x4 matrix 34an ne2dr enna b matrix wahda n3ml apply lel 3 operations.
             glm::mat4 ModelLocation = glm::translate(glm::mat4(1.0f), glm::vec3(0.0, 0.0, (float)i));
-            ///                                   4x4 matrix        angle ,        axis
-            glm::mat4 ModelRotation = glm::rotate(ModelRotation, time * 0.5f, glm::vec3(1.0, 0.0, 1.0));
+            /// rotate                               4x4 matrix        angle ,        axis
+            glm::mat4 ModelRotation = glm::rotate(ModelLocation, time * 0.5f, glm::vec3(1.0, 0.0, 1.0));
+            /// momken enna n3ml el rotations bst5dam el ruler angles
+            /// 1. pitch -> el rotation bta3 el x
+            /// 2. yaw -> el rotation bta3 el y
+            /// 3. roll -> el rotation bta3 el z
+            /// 34an nst5dmo lazm ne3ml include <glm/gtx/euler_angles.hpp>
+            // wl functions baa el yaw pitch roll
+            //                                              yaw          pitch        roll
+            // glm::mat4 ModelRotation = glm::yawPitchRoll(time * 0.5f, time * 0.3f, time * 0.8f);
             /// scale
+            glm::mat4 ModelScale = glm::scale(ModelRotation, glm::vec3(2.5, 1.5, 0.5));
+            //! Note baa mohema , eny el ana 3mlo da 3ks el elmfrod ye7sl 7rfyn, el mfrod n3ml scale b3den rotation, w fl akher el translation,
+            //! lakn hena ana 3amel el 3ks bzbt.
+            //? 34an ne3ml shering baa, bn3ml cascading wra b3d.
 
+            /// la7ez fo2 en el hagat btslm b3d, fa el translate byslm el rotate bysl el sclae.
             /// MVP = Model View Projection
-            glm::mat4 MVP = PrespectiveView * View * ModelRotation;
+            glm::mat4 MVP = PrespectiveView * View * ModelScale;
 
             /// hena bnb3t uniform no3o matrix 7agmo 4x4 w v (vector) da m3naha eny mmkn ab3t kaza element fe nfs el w2t.
             ///  mvp_loc-> fa bb3tlo mkan el uniform bta3y
