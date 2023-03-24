@@ -1,0 +1,5 @@
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build/CMakeFiles/gfx_lab.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build/CMakeFiles/ALL_BUILD.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build/CMakeFiles/ZERO_CHECK.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build/vendor/glfw/CMakeFiles/ALL_BUILD.dir
+C:/GitHub/FacultyOfEngineeringMaterial/ThirdYear/SecondTerm/Graphics/labs/lab5/Week 4 - Transforms & Depth Testing/build/vendor/glfw/src/CMakeFiles/glfw.dir

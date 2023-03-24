@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab5\Week 4 - Transforms &amp; Depth Testing\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab5\Week 4 - Transforms &amp; Depth Testing\vendor\glad\src\gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab5\Week 4 - Transforms &amp; Depth Testing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3E23E6DA-E133-3D08-BE13-92F477E40AAC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -8,10 +8,11 @@ set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)           # Don't build Installation I
 set(GLFW_USE_HYBRID_HPG ON CACHE BOOL "" FORCE)     # Add variables to use High Performance Graphics Card if available
 add_subdirectory(vendor/glfw)
 
+# this is how we include all the libraries we use in the application
 include_directories(
     vendor/glfw/include
     vendor/glad/include
-    vendor/glm
+    vendor/glm 
 )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)

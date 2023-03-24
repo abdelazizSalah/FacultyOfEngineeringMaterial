@@ -3,6 +3,7 @@
 layout(location = 0) in vec3 position;
 layout(location = 1) in vec4 color;
 
+// model view projection
 uniform mat4 MVP;
 
 out vec4 vertex_color;

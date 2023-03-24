@@ -1,24 +1,30 @@
 #include <iostream>
-#include <glad/gl.h> 
+#include <glad/gl.h>
 #include <GLFW/glfw3.h>
 #include <string>
 #include <fstream>
+// this library is used to do math for us.
 #include <glm/glm.hpp>
+/// this is included to do the matrix transformations and multiplication operations.
 #include <glm/gtc/matrix_transform.hpp>
 
-struct Color {
+struct Color
+{
     uint8_t r, g, b, a;
 };
 
-struct Vertex {
+struct Vertex
+{
+    /// we used the glm vec3 instead of the normal vec3
     glm::vec3 position;
     Color color;
 };
 
-GLuint load_shader(const std::string& path, GLenum shader_type) {
+GLuint load_shader(const std::string &path, GLenum shader_type)
+{
     std::ifstream file(path);
     std::string sourceCode = std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
-    const char* sourceCodeCStr = sourceCode.c_str();
+    const char *sourceCodeCStr = sourceCode.c_str();
 
     GLuint shader = glCreateShader(shader_type);
     glShaderSource(shader, 1, &sourceCodeCStr, nullptr);
@@ -26,7 +32,8 @@ GLuint load_shader(const std::string& path, GLenum shader_type) {
 
     GLint status;
     glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
-    if (!status) {
+    if (!status)
+    {
         GLint length;
         glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &length);
         char *logStr = new char[length];
@@ -41,25 +48,29 @@ GLuint load_shader(const std::string& path, GLenum shader_type) {
     return shader;
 }
 
-int main() {
-    
-    if(!glfwInit()){
+int main()
+{
+
+    if (!glfwInit())
+    {
         std::cerr << "Failed to initialize GLFW\n";
         exit(1);
     }
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    GLFWwindow* window = glfwCreateWindow(640, 480, "Hello Triangle", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(640, 480, "Hello Triangle", nullptr, nullptr);
 
-    if(!window){
+    if (!window)
+    {
         std::cerr << "Failed to create Window\n";
         glfwTerminate();
         exit(1);
     }
 
     glfwMakeContextCurrent(window);
-    if(!gladLoadGL(glfwGetProcAddress)){
+    if (!gladLoadGL(glfwGetProcAddress))
+    {
         std::cerr << "Failed to load OpenGL\n";
         glfwDestroyWindow(window);
         glfwTerminate();
@@ -77,24 +88,23 @@ int main() {
     glDeleteShader(fs);
 
     Vertex vertices[4] = {
-        {{-0.5, -0.5, 0.0},  {255, 0, 0, 255}},
-        {{ 0.5, -0.5, 0.0},  {0, 255, 0, 255}},
-        {{ 0.5,  0.5, 0.0},  {0, 0, 255, 255}},
-        {{-0.5,  0.5, 0.0},  {255, 255, 0, 255}},
+        {{-0.5, -0.5, 0.0}, {255, 0, 0, 255}},
+        {{0.5, -0.5, 0.0}, {0, 255, 0, 255}},
+        {{0.5, 0.5, 0.0}, {0, 0, 255, 255}},
+        {{-0.5, 0.5, 0.0}, {255, 255, 0, 255}},
     };
 
-    uint16_t elements[6] = { 0, 1, 2, 2, 3, 0 };
+    uint16_t elements[6] = {0, 1, 2, 2, 3, 0};
 
     GLuint vertex_buffer;
     glGenBuffers(1, &vertex_buffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
-    glBufferData(GL_ARRAY_BUFFER, 4*sizeof(Vertex), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, 4 * sizeof(Vertex), vertices, GL_STATIC_DRAW);
 
     GLuint element_buffer;
     glGenBuffers(1, &element_buffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6*sizeof(uint16_t), elements, GL_STATIC_DRAW);
-
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(uint16_t), elements, GL_STATIC_DRAW);
 
     GLuint vertex_array;
     glGenVertexArrays(1, &vertex_array);
@@ -102,13 +112,13 @@ int main() {
 
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
 
-    GLint position_loc = 0; //glGetAttribLocation(program, "position");
+    GLint position_loc = 0; // glGetAttribLocation(program, "position");
     glEnableVertexAttribArray(position_loc);
     glVertexAttribPointer(position_loc, 3, GL_FLOAT, false, sizeof(Vertex), 0);
 
-    GLint color_loc = 1; //glGetAttribLocation(program, "color");
+    GLint color_loc = 1; // glGetAttribLocation(program, "color");
     glEnableVertexAttribArray(color_loc);
-    glVertexAttribPointer(color_loc, 4, GL_UNSIGNED_BYTE, true, sizeof(Vertex), (void*)offsetof(Vertex, color));
+    glVertexAttribPointer(color_loc, 4, GL_UNSIGNED_BYTE, true, sizeof(Vertex), (void *)offsetof(Vertex, color));
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer);
 
@@ -122,20 +132,34 @@ int main() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClearDepth(1.0f);
 
-    while(!glfwWindowShouldClose(window)){
+    while (!glfwWindowShouldClose(window))
+    {
         float time = (float)glfwGetTime();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(program);
         glBindVertexArray(vertex_array);
 
-        glm::mat4 P = glm::perspective(glm::pi<float>()*0.5f, 640.0f/480.0f, 0.01f, 1000.0f);
+        /// we used the glm perspective function instead of the normal perspective function.
+        /// prespective -> el 7agat el b3eda btb2a asghar, w el hagat el oryba btb2a akbur, zyha zy nazar el bashar
+        /// fe no3 tany esmo el orthogonal w da feh kol haga btb2a parallel lb3d, w by7afz 3la el sizing.
+        // perspective parameters:
+        /// 1. field of view (in radians) -> zawyet el ro2ya bt3ty.
+        /// 2. aspect ratio -> el width m2som 3la el height.
+        /// 3.near -> a2rab haga m2drsh ashof a2rb mnha.
+        /// 4.far -> ab3d haga a2dr ashofha.
+        glm::mat4 P = glm::perspective(glm::pi<float>() * 0.5f, 640.0f / 480.0f, 0.01f, 1000.0f);
+
+        /// lookAt parameters:
+        /// 1. eye -> el camera el bshof mnha.
+        /// 2. center -> el point el bshof 3ala el 7aga el 3ayz a2dr.
+        /// 3. up -> el direction el bshof 3ala el 7aga el 3ayz a2dr.
         glm::mat4 V = glm::lookAt(
             glm::vec3(2.0f * cosf(time), 1.0f, 2.0f * sinf(time)),
             glm::vec3(0.0f, 0.0f, 0.0f),
-            glm::vec3(0.0f, 1.0f, 0.0f)
-        );
-        for(int i = -2; i <= 2; i++){
+            glm::vec3(0.0f, 1.0f, 0.0f));
+        for (int i = -2; i <= 2; i++)
+        {
             glm::mat4 M = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, (float)i));
 
             glm::mat4 MVP = P * V * M;
@@ -143,7 +167,7 @@ int main() {
             glUniformMatrix4fv(mvp_loc, 1, false, &MVP[0][0]);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, 0);
         }
-        
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
