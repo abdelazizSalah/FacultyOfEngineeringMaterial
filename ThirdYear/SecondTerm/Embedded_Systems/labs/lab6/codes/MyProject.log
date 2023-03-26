@@ -1,0 +1,11 @@
+0	1	mikroCARM.exe -MSF -DBG -pSTM32F407VG -BIN -LHF -DL -SSA -O11111114 -fo16 -N"C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Embedded_Systems\labs\lab6\codes\MyProject.mcpar" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for ARM\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for ARM\Uses\ST M4\" -SP"C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Embedded_Systems\labs\lab6\codes\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for ARM\Uses\ST M4\" "MyProject.c" "__Lib_Math.emcl" "__Lib_MathDouble.emcl" "__Lib_Delays.emcl" "__Lib_System_4XX.emcl" "__Lib_GPIO_32F4xx_Defs.emcl" "__Lib_GPIO_32F4xx.emcl" "__Lib_Button.emcl"	 
+diagnostics: 0	122	Compilation Started	MyProject.c
+diagnostics: 121	123	Compiled Successfully	MyProject.c
+diagnostics: 0	127	All files Compiled in 94 ms	 
+hint: 0	1144	Used RX: 16 (100%)   Free RX: 0 (0%)	Used RX: 16 (100%)   Free RX: 0 (0%)
+hint: 0	1144	Static RAM (bytes): 10   Dynamic RAM (bytes): 131057	Static RAM (bytes): 10   Dynamic RAM (bytes): 131057
+hint: 0	1144	Used ROM (bytes): 2774 (0%)  Free ROM (bytes): 1045802 (100%)	Used ROM (bytes): 2774 (0%)  Free ROM (bytes): 1045802 (100%)
+diagnostics: 0	125	Project Linked Successfully	MyProject.mcpar
+diagnostics: 0	128	Linked in 359 ms	 
+diagnostics: 0	129	Project 'MyProject.mcpar' completed: 656 ms	 
+diagnostics: 0	103	Finished successfully: 26 Mar 2023, 14:21:59	MyProject.mcpar
