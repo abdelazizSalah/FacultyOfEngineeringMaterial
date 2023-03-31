@@ -32,3 +32,10 @@ https://ieeexplore.ieee.org/document/9142202
 
 ## Excel sheet link 
 https://docs.google.com/spreadsheets/d/1lVhIeANdDwYKJzCBf8CX2g9fVaDmtYLEggS7id9-gPE/edit#gid=0
+
+
+## Afkar lel presentation
+1. 7ot Ramadan kareem aw 3eed sa3ed fl intro, w badel el 7rof w 5lehom y3mlo guess leha 
+   1. Ramadan Kareem :)
+   2. D R R A E M A E A K N A M -> can you decrypt it?
+   3. 
