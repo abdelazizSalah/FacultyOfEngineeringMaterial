@@ -111,3 +111,6 @@ def start():
 
         # lets start the thread
         thread.start()
+
+
+start()
