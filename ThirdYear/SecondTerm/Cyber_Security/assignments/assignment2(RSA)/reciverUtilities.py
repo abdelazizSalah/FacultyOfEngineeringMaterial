@@ -2,7 +2,7 @@ import numpy as np
 import socket
 import time
 import random
-from math import sqrt, ceil
+from math import sqrt, ceil, gcd
 
 # the used format.
 FORMAT = 'utf-8'
@@ -56,7 +56,7 @@ def evaluateE(phi):
     '''
     e = 2
     while True:
-        if np.gcd(e, phi) == 1:
+        if gcd(e, phi) == 1:
             break
         e += 1
     return e
