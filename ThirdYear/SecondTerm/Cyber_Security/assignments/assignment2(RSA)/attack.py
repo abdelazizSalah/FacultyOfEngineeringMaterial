@@ -63,7 +63,6 @@ PublicKey = (e, n)
 
 print(f'PublicKey = {PublicKey}', flush=True)
 # 2. apply prime factorization on n
-
 tic = time.time()  # capture start time
 primeFactors = primeFactorization(n)
 toc = time.time()  # capture end time
@@ -79,6 +78,9 @@ phi_n = int(phi_n)
 # 4. calculate d
 d = pow(PublicKey[0], -1, phi_n)
 
+### !      Hacking is done :)     ! ###
+# 5. print the private key
 print(
-    'private key is ', (d, PublicKey[1])
+
+    'HACKING IS DONE! \n private key is ', (d, PublicKey[1])
 )

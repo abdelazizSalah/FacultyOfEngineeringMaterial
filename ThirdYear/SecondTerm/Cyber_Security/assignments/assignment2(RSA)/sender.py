@@ -27,7 +27,7 @@ import threading
 import time
 import socket
 
-from utilityFunctions import *
+from senderUtilites import *
 #!----------------------------- building the program ------------------------------------------!#
 
 
@@ -70,10 +70,6 @@ while (1):
     # ! hena ehna 3auzen enna nb3t lel server baa kol el messages.
     for message in encryptedMessages:
         send(message)
-        # time.sleep(1)
-
-    # # then wait till the receiver sends the message back
-    # read(PrivateKey[0], PrivateKey[1], conversionMap)
 
 # closing the connection
 send(DISCONECTIONCONDITION)
