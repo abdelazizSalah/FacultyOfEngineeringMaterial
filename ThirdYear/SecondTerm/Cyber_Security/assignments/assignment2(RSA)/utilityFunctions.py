@@ -27,7 +27,6 @@ def send(msg):
         utility function to send the message from the client to the server
     '''
     msg = str(msg)
-    print('Mngaaaaa: ', flush=True)
     print('msg: ', msg, flush=True)
 
     MSG = msg.encode(FORMAT)
@@ -36,7 +35,6 @@ def send(msg):
     # MSG_LEN = 5
     # send the length of the message
     send_len = str(MSG_LEN).encode(FORMAT)
-    print(f'lengthhHena:  {msg}', flush=True)
 
     # add the header to the length of the message
     # el satr da m3nah eny b7oot el header el awl fl message, w b3den

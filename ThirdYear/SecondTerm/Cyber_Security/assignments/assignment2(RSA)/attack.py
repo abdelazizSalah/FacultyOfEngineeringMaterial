@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, ceil
 import numpy as np
 import socket
 import time
@@ -19,7 +19,7 @@ def primeFactorization(n):
         this is a utility function used to attack the RSA algorithm using the prime factorization attack
     '''
     # since the maximum factor must be less than the square root of n
-    max_factor = int(np.ceil(np.sqrt(n)))
+    max_factor = int(ceil(sqrt(n)))
     primeFactors = []
     divisior = 2
     while divisior <= max_factor:
