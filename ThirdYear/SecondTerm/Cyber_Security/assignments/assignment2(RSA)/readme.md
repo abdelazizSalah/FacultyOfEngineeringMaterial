@@ -19,3 +19,7 @@
 ## now lets do the attack
 > python attack.py
 - as the number of bits increases the attack time will exponentially increases. 
+
+
+## link for video explaination
+>   https://www.youtube.com/watch?v=lZgaZK_KBXk
