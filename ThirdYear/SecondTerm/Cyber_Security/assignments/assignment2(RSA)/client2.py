@@ -23,32 +23,36 @@
 '''
 
 # ?  lets get our hands dirty :)
-# import numpy as np
-import socket
 import threading
-# this library is used to send objects rather than strings
-import pickle
 import time
-# import rsa
+import socket
+
 from utilityFunctions import *
 #!----------------------------- building the program ------------------------------------------!#
 
 
-message = ''
-while (message != DISCONECTIONCONDITION):
-    # evaluate the public and private keys
-    PublicKey, PrivateKey = applyingRSA()
+# recieve the public key of the server
+
+msg_len = client.recv(HEADER).decode(FORMAT)
+e = client.recv(int(msg_len)).decode(FORMAT)
+e = int(e)
+msg_len = client.recv(HEADER).decode(FORMAT)
+n = client.recv(int(msg_len)).decode(FORMAT)
+n = int(n)
+PublicKey = (e, n)
+
+print(PublicKey)
+
+while (1):
 
     # 1. define the data
     conversionMap = initiateData()
 
-    # apply threading after defining the private key
-    thread = threading.Thread(target=read, args=(PrivateKey, conversionMap))
-    thread.start()
-
     # 2. get the message from the user
     message = input("Enter the message: ")
-
+    if(message == DISCONECTIONCONDITION):
+        break
+    # send(message)
     # 3. clean the message
     message = cleanData(message=message, conversionMap=conversionMap)
 
@@ -63,10 +67,13 @@ while (message != DISCONECTIONCONDITION):
 
     # 6. send the message to the receiver
     # TODO?: send the message to the receiver and make the communication
-    #! hena ehna 3auzen enna nb3t lel server baa kol el messages.
+    # ! hena ehna 3auzen enna nb3t lel server baa kol el messages.
     for message in encryptedMessages:
         send(message)
-        time.sleep(0.05)
+        # time.sleep(1)
+
+    # # then wait till the receiver sends the message back
+    # read(PrivateKey[0], PrivateKey[1], conversionMap)
 
 # closing the connection
 send(DISCONECTIONCONDITION)

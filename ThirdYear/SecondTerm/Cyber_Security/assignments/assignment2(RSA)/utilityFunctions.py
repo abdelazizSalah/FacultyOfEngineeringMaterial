@@ -3,8 +3,6 @@ import numpy as np
 import rsa
 # ? initiating the connections
 
-# the port on which we are connected
-PORT = 5050
 # the used format.
 FORMAT = 'utf-8'
 # condition of closing
@@ -14,15 +12,14 @@ HEADER = 64
 
 # here, the server must be fixed
 SERVER = '127.0.0.1'
-
+# the port on which we are connected
+PORT = 5050
 # define ADDR
 ADDR = (SERVER, PORT)
-
 # define client socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-# # make the connection on certain address
-# client.connect(ADDR)
+# make the connection on certain address
+client.connect(ADDR)
 
 
 def send(msg):
@@ -30,13 +27,17 @@ def send(msg):
         utility function to send the message from the client to the server
     '''
     msg = str(msg)
+    print('Mngaaaaa: ', flush=True)
     print('msg: ', msg, flush=True)
+
     MSG = msg.encode(FORMAT)
     # the length of the message
     MSG_LEN = len(MSG)
     # MSG_LEN = 5
     # send the length of the message
     send_len = str(MSG_LEN).encode(FORMAT)
+    print(f'lengthhHena:  {msg}', flush=True)
+
     # add the header to the length of the message
     # el satr da m3nah eny b7oot el header el awl fl message, w b3den
     # ba7ot el message baa
@@ -48,10 +49,11 @@ def send(msg):
 
 
 def read(d, n, conversionMap):
-    PrivateKey = (d, n)
     '''
         utility function to read the message from the server to the client
     '''
+    PrivateKey = (d, n)
+    print(f'PrivateKey = {PrivateKey}', flush=True)
     msg_len = client.recv(HEADER).decode(FORMAT)
     if(msg_len):
         # msg is string, so we want to convert it into int
@@ -60,16 +62,17 @@ def read(d, n, conversionMap):
         # 7. decrypt the message using the private key on recieving side
         decryptedMessages = decryptMessage(
             encryptedMessage=msg, PrivateKey=PrivateKey)
+        print('decryptedMessages: ', decryptedMessages, flush=True)
         # 8. get the original plain text
         originalMessage = getPlainTextAfterDecryption(
             decryptedMessages, conversionMap)
         # 9. print the message
-        print('originalMessage: ', originalMessage, flush=True)
+        print('originalMessage: ', str(originalMessage), flush=True)
 
 
 def initiateData():
     ''' 
-        utility function to initiate the data
+        utility function to create the mapping between the characters and the numbers
     '''
     conversionMap = {str(i): i for i in range(10)}
     conversionMap2 = {chr(char): i for i, char in zip(
@@ -117,7 +120,7 @@ def cleanData(message, conversionMap):
 
 def generateBlockToBeSent(message, conversionMap):
     '''
-        utility function to generate the blocks to be sent
+        utility function to generate the blocks to be sent each with len = 5
     '''
     sendingBlocks = []
     counter = 0
@@ -136,7 +139,32 @@ def generateBlockToBeSent(message, conversionMap):
     return sendingBlocks
 
 
-def applyingRSA(dynamic=False, sizeInBytes=1024):
+def evaluateE(phi):
+    '''
+        utility function to evaluate the value of e
+    '''
+    e = 2
+    while True:
+        if np.gcd(e, phi) == 1:
+            break
+        e += 1
+    return e
+
+
+def evaluateD(e, phi):
+    '''
+        utility function to evaluate the value of d
+    '''
+    # d = 2
+    # while True:
+    #     if (e*d) % phi == 1:
+    #         break
+    #     d += 1
+    # return d
+    return pow(e, -1, phi)
+
+
+def applyingRSA(dynamic=False, sizeInBytes=1024, clientNum=1):
     '''
         C = M^e (mod n)
         M = C^d mod n = ((M)^e^d) mod n = M^(ed) mod n
@@ -146,26 +174,31 @@ def applyingRSA(dynamic=False, sizeInBytes=1024):
         our public key and our private key. 
     '''
     # 1. choosing two prime numbers
-    # TODO: to be generated
-    p = 7919
-    q = 5839
+    if clientNum == 1:
+        p = 1000231
+        q = 7907
+    else:
+        p = 1196089
+        q = 14071
+
     # 2. calculating n
-    n = p*q
+    n = p*q  # 7,908,826,517
     # 3. calculating phi(n)
-    phi = (p-1)*(q-1)
+    phi = (p-1)*(q-1)  # 7,907,818,380
     # 4. choosing e, it should be coprime with phi(n)
-    # TODO: to be generated
-    e = 41  # gcd (41, 46239041) = 1, I have calculated it manually.
+    # gcd (41, 7,907,818,380) = 1, I have calculated it manually.
+    e = evaluateE(phi)
     # 5. calculating d
     # ! this is the inverse of the e mod phi(n) -> this should kept secret and only the receiver should know it.
-    d = 23676365
+    d = evaluateD(e, phi)
+    print(e, d, sep='------------------', flush=True)
 
     if dynamic == False:
         publicKey = (e, n)
         privateKey = (d, n)
     else:
         publicKey, privateKey = rsa.newkeys(sizeInBytes)
-    return (e, n), (d, n)
+    return publicKey, privateKey
 
 
 def fastModularExponentiationusingPowOf2(b, e, n):
@@ -208,9 +241,8 @@ def encryptMessages(sendingBlocks, PublicKey):
     '''
     encryptedMessages = []
     for block in sendingBlocks:
-        # this loop to avoid overflow
-        encryptedBlock = fastModularExponentiationusingPowOf2(
-            int(block), PublicKey[0], PublicKey[1])  # C = M^e (mod n)
+        print('------>', block, PublicKey[0], PublicKey[1])
+        encryptedBlock = pow(int(block), PublicKey[0], PublicKey[1])
         encryptedMessages.append(encryptedBlock)
     return encryptedMessages
 
@@ -221,9 +253,12 @@ def getPlainTextAfterDecryption(num, conversionMap):
         into the original plain text
     '''
     message = []
+    # this to reverse the mapping. so we can get the character from the number
     newMap = {v: k for k, v in conversionMap.items()}
     for i in range(5):
         char = np.mod(int(np.floor(np.divide(num, np.power(37, i)))), 37)
+        num -= char
+        print(char)
         message.append(newMap[char])
     message.reverse()
     return str(message)
@@ -234,11 +269,22 @@ def decryptMessage(encryptedMessage, PrivateKey):
         utility function to decrypt the message
     '''
     print("encrypted message: ", encryptedMessage, end='\n', flush=True)
-    # decryptedMessages = []
-    # for block in encryptedMessage:
-    # print("block: ", encryptedMessage, end='\n')
-    # this loop to avoid overflow
-    decryptedBlock = fastModularExponentiationusingPowOf2(
-        int(encryptedMessage), PrivateKey[0], PrivateKey[1])  # M = C^d mod n
-    # decryptedMessages.append(decryptedBlock)
+    print(f"d = {PrivateKey[0]} , n= {PrivateKey[1]} ", flush=True)
+    decryptedBlock = pow(
+        int(encryptedMessage[0]), PrivateKey[0], PrivateKey[1])
     return decryptedBlock
+
+
+# covetsionMap = initiateData()
+# message = cleanData('aka47', covetsionMap)  # fe mushkela mn b3d 7rf el o
+# block = generateBlockToBeSent(
+#     message=message, conversionMap=covetsionMap)  # correct
+# Puy, Priey = applyingRSA()
+# print(Puy, Priey)
+# encBlo = encryptMessages(block, PublicKey=Puy)
+# print(encBlo)
+# decBlo = decryptMessage(encBlo, Priey)
+# print(decBlo)
+# print(getPlainTextAfterDecryption(decBlo, covetsionMap))
+
+# 2086727561

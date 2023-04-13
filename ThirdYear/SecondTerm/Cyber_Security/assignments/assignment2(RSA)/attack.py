@@ -11,7 +11,7 @@ def primeFactorization(n):
     max_factor = int(np.ceil(np.sqrt(n)))
     primeFactors = []
     divisior = 2
-    while divisior <= n:
+    while divisior <= max_factor:
         if n % divisior == 0:
             primeFactors.append(divisior)
             n = n/divisior
@@ -19,3 +19,6 @@ def primeFactorization(n):
             divisior += 1
 
     return primeFactors
+
+
+print(primeFactorization(9))
