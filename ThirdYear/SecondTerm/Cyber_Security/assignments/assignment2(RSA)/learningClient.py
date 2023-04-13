@@ -51,6 +51,7 @@ def read():
     msg_len = client.recv(HEADER).decode(FORMAT)
     if(msg_len):
         # msg is string, so we want to convert it into int
+        print('msg_len: ', msg_len)
         msg_len = int(msg_len)
         msg = client.recv(msg_len).decode(FORMAT)
         print(msg)
@@ -58,11 +59,11 @@ def read():
 
 x = ''
 while (x != DISCONECTIONCONDITION):
-    x = input('Enter the message to be sent: ')
-    send(x)
     # threading
     thread = threading.Thread(target=read)
     thread.start()
+    x = input('Enter the message to be sent: ')
+    send(x)
 
 # closing the connection
 send(DISCONECTIONCONDITION)

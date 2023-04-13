@@ -66,13 +66,12 @@ def client(conn, addr, clients):
         if(msg_len):
             # msg is string, so we want to convert it into int
             msg_len = int(msg_len)
-
             msg = conn.recv(msg_len).decode(FORMAT)
             if msg == DISCONECTIONCONDITION:
                 connected = False
                 continue
             print(
-                f'the adress is:\t {addr} and the content of the message is:\n {msg}')
+                f'the adress is:\t {addr} and the content of the message is:\n {msg}', flush=True)
         # el loop de el hadaf menha enny lama wa7ed yeb3tly 7aga, aro7 ab3t el 7aga de
         # le kol el nas el tanya m3ada howa.
         # aknha fe game kda fahem.
@@ -94,23 +93,30 @@ def start():
     print(f'The server is listening to {SERVER}')
     clients = []
     while True:
-        '''
-        Accept de btst2bl el data el gaylha mn ay client
-        fa lama byb2a fe connection btrg3 7agten
-        addr -> da el IP address bta3 el client
-        conn -> da socket by3br 3n el connection el 7slt ben el client wl server
-        '''
-        conn, addr = server.accept()
-        clients.append(conn)
-        # now we want to apply parallelism
-        '''
-            Thread takes the function to be applied.    
-            the argument to be sent to this function. 
-        '''
-        thread = threading.Thread(target=client, args=(conn, addr, clients))
+        try:
+            '''
+            Accept de btst2bl el data el gaylha mn ay client
+            fa lama byb2a fe connection btrg3 7agten
+            addr -> da el IP address bta3 el client
+            conn -> da socket by3br 3n el connection el 7slt ben el client wl server
+            '''
+            conn, addr = server.accept()
+            clients.append(conn)
+            # now we want to apply parallelism
+            '''
+                Thread takes the function to be applied.    
+                the argument to be sent to this function. 
+            '''
+            print('threding the client')
+            thread = threading.Thread(
+                target=client, args=(conn, addr, clients))
 
-        # lets start the thread
-        thread.start()
+            # lets start the thread
+            thread.start()
+        except KeyboardInterrupt:
+            print('closing the server')
+            server.close()
+            break
 
 
 start()
