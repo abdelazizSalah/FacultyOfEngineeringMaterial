@@ -33,7 +33,7 @@ def getPlainTextAfterDecryption(num, conversionMap):
         char = num % 37
         num //= 37
         message.append(newMap[char])
-    message.reverse()
+    # message.reverse()
     return str(message)
 
 
@@ -42,7 +42,6 @@ def decryptMessage(encryptedMessage, PrivateKey):
         utility function to decrypt the message
     '''
     print("encrypted message: ", encryptedMessage, end='\n', flush=True)
-    print(f"d = {PrivateKey[0]} , n= {PrivateKey[1]} ", flush=True)
     decryptedBlock = pow(
         int(encryptedMessage), PrivateKey[0], PrivateKey[1])
     return decryptedBlock
@@ -112,7 +111,7 @@ def applyingRSA(dynamic=False, sizeInBytes=1024, clientNum=1):
     # 5. calculating d
     # ! this is the inverse of the e mod phi(n) -> this should kept secret and only the receiver should know it.
     d = evaluateD(e, phi)
-    print(e, d, sep='------------------', flush=True)
+    print(f'public key is {e, n},while the privet one is {d, n}', flush=True)
 
     if dynamic == False:
         publicKey = (e, n)
@@ -139,7 +138,6 @@ def send(msg, client):
     client.send(send_len)
     # send the message
     client.send(MSG)
-
 
  # generating keys for second user.
 PublicKey, PrivateKey = applyingRSA(clientNum=2)
@@ -175,10 +173,7 @@ def client(conn, addr, clients):
         if(msg_len):
             # msg is string, so we want to convert it into int
             msg_len = int(msg_len)
-            print(f'length = {msg_len}', flush=True)
             msg = conn.recv(msg_len).decode(FORMAT)
-            print(f'msgGatly kda {msg}', flush=True)
-
             if msg == DISCONECTIONCONDITION:
                 connected = False
                 continue
@@ -190,14 +185,14 @@ def client(conn, addr, clients):
             originalMessage = getPlainTextAfterDecryption(
                 decryptedMessages, conversionMap)
             # 9. print the message
-            print('originalMessage: ', str(originalMessage), flush=True)
-        # el loop de el hadaf menha enny lama wa7ed yeb3tly 7aga, aro7 ab3t el 7aga de
-        # le kol el nas el tanya m3ada howa.
-        # aknha fe game kda fahem.
-        #! msh muhema awy lel assignment bt3na.
-        for client in clients:
-            if client != conn:
-                send(msg, client)
+            print('originalMessage: ', originalMessage, flush=True)
+            # el loop de el hadaf menha enny lama wa7ed yeb3tly 7aga, aro7 ab3t el 7aga de
+            # le kol el nas el tanya m3ada howa.
+            # aknha fe game kda fahem.
+            # #! msh muhema awy lel assignment bt3na.
+            # for client in clients:
+            #     if client != conn:
+            #         send(msg, client)
 
 
 def start():

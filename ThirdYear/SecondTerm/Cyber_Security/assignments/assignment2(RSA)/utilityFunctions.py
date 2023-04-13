@@ -114,7 +114,7 @@ def cleanData(message, conversionMap):
             message.append(' ')
             remainder += 1
     # reversing the message to follow our scheme :)
-    message.reverse()
+    # message.reverse()
     return message
 
 
@@ -155,12 +155,6 @@ def evaluateD(e, phi):
     '''
         utility function to evaluate the value of d
     '''
-    # d = 2
-    # while True:
-    #     if (e*d) % phi == 1:
-    #         break
-    #     d += 1
-    # return d
     return pow(e, -1, phi)
 
 
@@ -260,7 +254,7 @@ def getPlainTextAfterDecryption(num, conversionMap):
         num -= char
         print(char)
         message.append(newMap[char])
-    message.reverse()
+    # message.reverse()
     return str(message)
 
 
