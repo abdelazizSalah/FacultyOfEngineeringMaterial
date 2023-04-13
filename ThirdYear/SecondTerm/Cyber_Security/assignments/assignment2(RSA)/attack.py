@@ -1,6 +1,7 @@
 from math import sqrt
 import numpy as np
 import socket
+import time
 '''
     Attack file:
         here we want to apply the attack
@@ -62,7 +63,13 @@ PublicKey = (e, n)
 
 print(f'PublicKey = {PublicKey}', flush=True)
 # 2. apply prime factorization on n
+
+tic = time.time()  # capture start time
 primeFactors = primeFactorization(n)
+toc = time.time()  # capture end time
+
+print(f"prime Factorization duration : {(toc-tic):.4f} seconds for {n} ")
+
 
 # 3. calculate phi(n)
 phi_n = (primeFactors[0] - 1) * \

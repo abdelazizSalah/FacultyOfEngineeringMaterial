@@ -2,7 +2,7 @@
 import socket
 import threading
 import numpy as np
-import rsa
+import random
 # the port on which we are connected
 PORT = 5050
 # the used format.
@@ -75,16 +75,87 @@ def evaluateD(e, phi):
     '''
         utility function to evaluate the value of d
     '''
-    # d = 2
-    # while True:
-    #     if (e*d) % phi == 1:
-    #         break
-    #     d += 1
-    # return d
     return pow(e, -1, phi)
 
 
-def applyingRSA(dynamic=False, sizeInBytes=1024, clientNum=1):
+def nBitRandom(n):
+    '''
+        utility function to generate a number with certain number of bits
+    '''
+    # Returns a random number
+    # between 2**(n-1)+1 and 2**n-1'''
+    return(random.randrange(2**(n-1)+1, 2**n-1))
+
+
+# Pre generated primes
+first_primes_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+                     31, 37, 41, 43, 47, 53, 59, 61, 67,
+                     71, 73, 79, 83, 89, 97, 101, 103,
+                     107, 109, 113, 127, 131, 137, 139,
+                     149, 151, 157, 163, 167, 173, 179,
+                     181, 191, 193, 197, 199, 211, 223,
+                     227, 229, 233, 239, 241, 251, 257,
+                     263, 269, 271, 277, 281, 283, 293,
+                     307, 311, 313, 317, 331, 337, 347, 349]
+
+
+def nBitRandom(n):
+    return random.randrange(2**(n-1)+1, 2**n - 1)
+
+
+def getLowLevelPrime(n):
+    '''Generate a prime candidate divisible
+    by first primes'''
+    while True:
+        # Obtain a random number
+        pc = nBitRandom(n)
+
+        # Test divisibility by pre-generated
+        # primes
+        for divisor in first_primes_list:
+            if pc % divisor == 0 and divisor**2 <= pc:
+                break
+        else:
+            return pc
+
+
+def isMillerRabinPassed(mrc):
+    '''Run 20 iterations of Rabin Miller Primality test'''
+    maxDivisionsByTwo = 0
+    ec = mrc-1
+    while ec % 2 == 0:
+        ec >>= 1
+        maxDivisionsByTwo += 1
+    assert(2**maxDivisionsByTwo * ec == mrc-1)
+
+    def trialComposite(round_tester):
+        if pow(round_tester, ec, mrc) == 1:
+            return False
+        for i in range(maxDivisionsByTwo):
+            if pow(round_tester, 2**i * ec, mrc) == mrc-1:
+                return False
+        return True
+
+    # Set number of trials here
+    numberOfRabinTrials = 20
+    for i in range(numberOfRabinTrials):
+        round_tester = random.randrange(2, mrc)
+        if trialComposite(round_tester):
+            return False
+    return True
+
+
+def generateRandomPrime(numberOfBits):
+    while True:
+        n = numberOfBits
+        prime_candidate = getLowLevelPrime(n)
+        if not isMillerRabinPassed(prime_candidate):
+            continue
+        else:
+            return prime_candidate
+
+
+def applyingRSA(sizeInBytes=1024):
     '''
         C = M^e (mod n)
         M = C^d mod n = ((M)^e^d) mod n = M^(ed) mod n
@@ -93,13 +164,12 @@ def applyingRSA(dynamic=False, sizeInBytes=1024, clientNum=1):
         Here we will just generate the data. 
         our public key and our private key. 
     '''
+
     # 1. choosing two prime numbers
-    if clientNum == 1:
-        p = 1000231
-        q = 7907
-    else:
-        p = 1196089
-        q = 14071
+    p = generateRandomPrime(sizeInBytes)
+    q = generateRandomPrime(sizeInBytes)
+
+    print(p, q)
 
     # 2. calculating n
     n = p*q  # 7,908,826,517
@@ -111,13 +181,11 @@ def applyingRSA(dynamic=False, sizeInBytes=1024, clientNum=1):
     # 5. calculating d
     # ! this is the inverse of the e mod phi(n) -> this should kept secret and only the receiver should know it.
     d = evaluateD(e, phi)
-    print(f'public key is {e, n},while the privet one is {d, n}', flush=True)
+    publicKey = (e, n)
+    privateKey = (d, n)
 
-    if dynamic == False:
-        publicKey = (e, n)
-        privateKey = (d, n)
-    else:
-        publicKey, privateKey = rsa.newkeys(sizeInBytes)
+    print(
+        f'public key is {publicKey},while the privet one is {privateKey}', flush=True)
     return publicKey, privateKey
 
 
@@ -140,7 +208,15 @@ def send(msg, client):
     client.send(MSG)
 
  # generating keys for second user.
-PublicKey, PrivateKey = applyingRSA(clientNum=2)
+while True:
+    number_of_bits = input(
+        'Please Enter the number of bits you want to use in key generation: ')
+    number_of_bits = int(number_of_bits)
+    if number_of_bits > 20:
+        break
+    else:
+        print('Please enter a number greater than 20')
+PublicKey, PrivateKey = applyingRSA(sizeInBytes=int(number_of_bits))
 
 
 def client(conn, addr, clients):
