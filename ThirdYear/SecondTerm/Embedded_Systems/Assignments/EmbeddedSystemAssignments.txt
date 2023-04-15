@@ -1,0 +1,23 @@
+1- when every algorithms is useful
+• FF (first fit) algorithm, where the list is scanned from the beginning for the 
+first “hole” that is large enough.
+
+• NF (next fit) where the list is scanned from where the last search ended for 
+the next “hole” that is large enough.
+
+• BF (best fit) where the entire list is searched for the hole that best fits the 
+new data.
+
+• WF (worst fit), which places data in the largest available “hole.”
+
+• QF (quick fit) where a list is kept of memory sizes and allocation is done from 
+this information.
+
+
+
+2- Petri For the problem of midterm.
+- One producer and two consumers.
+- Not alternating.
+- they work on condition.
+- one of them produces double tokens of the other. 
+- if they work together the producer should generate enough token for both of them. 
