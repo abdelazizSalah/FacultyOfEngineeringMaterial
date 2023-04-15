@@ -13,7 +13,7 @@ new data.
 • QF (quick fit) where a list is kept of memory sizes and allocation is done from 
 this information.
 
-
+DONE :D
 
 2- Petri For the problem of midterm.
 - One producer and two consumers.
@@ -21,3 +21,13 @@ this information.
 - they work on condition.
 - one of them produces double tokens of the other. 
 - if they work together the producer should generate enough token for both of them. 
+
+
+- 3 Scenarios
+ 1. first plant only will be water.
+ 2. second plant only will be water.
+ 3. both want to be planted.
+
+- Try to use PIPE
+- if we used the link in the 
+deliver to: Basem@eng.cu.edu.eg
