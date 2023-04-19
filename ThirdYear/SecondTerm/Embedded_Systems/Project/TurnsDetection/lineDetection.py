@@ -33,22 +33,6 @@ def compare(item1, item2):
             return 0
 
 
-def skin_detector_hsv(bgr_image):
-    hsv_image = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2HSV)
-    skin_region = cv2.inRange(hsv_image, (0, 0, 0), (20, 20, 20))
-    return skin_region
-
-
-def apply_skin_detector(img):
-    detected_skin = skin_detector_hsv(img)
-    bgr = cv2.cvtColor(detected_skin, cv2.COLOR_GRAY2BGR)
-    bgr = cv2.erode(bgr, np.ones((12, 12), np.uint8))
-    bgr = cv2.dilate(bgr, np.ones((35, 35), np.uint8))
-    bgr = cv2.erode(bgr, np.ones((15, 15), np.uint8))
-    # boxes = find_contours(bgr)
-    return boxes
-
-
 def detectingLines(gray):
     # # Reading the required image in
     # # which operations are to be done.
