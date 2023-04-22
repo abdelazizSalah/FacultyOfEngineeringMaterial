@@ -5,7 +5,6 @@ import cv2
 from lineDetection import *
 from skimage.morphology import binary_erosion, binary_dilation, binary_closing, skeletonize, thin
 import math
-from skimage import io
 
 
 def calcDsit(x, y):
@@ -70,10 +69,7 @@ async def upload(websocket):
         nparr = nparr.reshape(240, 320)
         img = nparr.copy()
 
-        # print(type(message))
-        # print(nparr)
         img = detectingLines(nparr)
-        # img = await detectCar(img)
 
         # convert the image to 3-channel format (if it is not already)
         # convert the numpy array to the source data type required for cv2.imshow
