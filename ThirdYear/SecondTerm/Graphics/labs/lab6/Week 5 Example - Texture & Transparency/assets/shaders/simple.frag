@@ -17,6 +17,8 @@ out vec4 frag_color;
 void main() {
     // de bndeha el texture el hy2ra menha w bnb3tlha el coordinates
     frag_color = texture(tex, fs_in.tex_coord);
+    // enta hena bt2olo lw el transparency < 0.5 mtrsmsh el pixel de aslun 
+    // de fekra helwa 34an mytl3lksh effect wehsh
     if(frag_color.a < 0.5) discard; 
 
     // frag_color = texelFetch(tex, ivec2(gl_FragCoord), 0);

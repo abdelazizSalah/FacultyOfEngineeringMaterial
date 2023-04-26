@@ -147,6 +147,7 @@ int main()
 
     /// Defining colors
     Color B = {0, 0, 0, 255};
+    // make white transparent
     Color W = {255, 255, 255, 0};
     Color Y = {255, 255, 0, 255};
     Color R = {255, 0, 0, 255};
@@ -202,9 +203,21 @@ int main()
 
     GLint tex_loc = glGetUniformLocation(program, "tex");
 
-    // glEnable(GL_BLEND);
-    // glBlendEquation(GL_FUNC_ADD);
-    // glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    // dol el by5lony a2dr a5ly el alwan transparent
+    // enta hena bt2olo ana 3auz yeb2a 3ndy blending
+    /*
+        tb y3ny a blending aslun?
+        enta 3ndk 7agten
+        src  --------> desteination
+        el src hwa el haga el bnrsmha
+        w el destination da el shaha el bnsrm 3leha
+        fa el blending byb2a equation keda
+        (srcAlpha) * src + (1 - srcAlpha) * dest
+        fa 3n tre2 el aplha de bn7dd el transparency bta3 el color
+    */
+    glEnable(GL_BLEND);
+    glBlendEquation(GL_FUNC_ADD);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     while (!glfwWindowShouldClose(window))
     {
