@@ -2,6 +2,7 @@
 
 layout(location = 0) in vec3 position;
 layout(location = 1) in vec4 color;
+// da el input el m7tago 34an ab3t el texture lel vertex shader
 layout(location = 2) in vec2 tex_coord;
 
 uniform mat4 MVP;

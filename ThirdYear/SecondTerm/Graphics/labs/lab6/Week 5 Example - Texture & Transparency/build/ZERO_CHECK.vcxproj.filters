@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\GitHub\FacultyOfEngineeringMaterial\ThirdYear\SecondTerm\Graphics\labs\lab6\Week 5 Example - Texture &amp; Transparency\build\CMakeFiles\ef36c9d0abfacb48053515bbd2862878\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0BF716FA-0265-3ACE-97CF-5F35E21B469B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
