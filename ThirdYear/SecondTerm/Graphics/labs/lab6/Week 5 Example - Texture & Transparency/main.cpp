@@ -156,7 +156,15 @@ int main()
     /// bs el hagat de btb2a mt3rfa fl CPU
     /// ehna 3auzen nerf3ha 3la el GPU baa.
     Color image[] = {
-        Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, R, R, Y, Y, Y, Y, Y, Y, Y, R, W, W, R, Y, Y, Y, Y, Y, Y, Y, R, R, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, B, B, Y, Y, Y, Y, R, R, Y, Y, R, R, Y, Y, Y, Y, B, B, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y};
+        W, W, Y, Y, Y, Y, Y, Y, W, W,
+        W, Y, Y, Y, R, R, Y, Y, Y, W,
+        Y, Y, Y, R, W, W, R, Y, Y, Y,
+        Y, Y, Y, Y, R, R, Y, Y, Y, Y,
+        Y, Y, Y, Y, Y, Y, Y, Y, Y, Y,
+        Y, R, R, Y, Y, Y, Y, R, R, Y,
+        Y, B, B, Y, Y, Y, Y, B, B, Y,
+        W, Y, Y, Y, Y, Y, Y, Y, Y, W,
+        W, W, Y, Y, Y, Y, Y, Y, W, W};
 
     /// fbn3rf texture w n3mlo bind
     /// 34an nersmo fl gpu bn3rf haga zy el buffer esmha texture
@@ -183,9 +191,12 @@ int main()
     // 34an ne2dr nersm el texture lazm n3rf el mipmap
     glGenerateMipmap(GL_TEXTURE_2D);
 
+    // da el goz2 el b3ml beh sampling lel texture
     GLuint sampler;
     glGenSamplers(1, &sampler);
 
+    // hena bn3mlo bl nearest.
+    // mmkn n3mlo bilinear
     glSamplerParameteri(sampler, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glSamplerParameteri(sampler, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
@@ -215,7 +226,8 @@ int main()
         glUniform1i(tex_loc, 0);
         // glUniform1i(0);
 
-        // glBindSampler(0, sampler);
+        // de el tre2a el b2dr beha eny ast5dm el sampler w a3mlo bind m3 ba2y el buffers
+        glBindSampler(0, sampler);
 
         glm::mat4 P = glm::perspective(glm::pi<float>() * 0.5f, float(width) / height, 0.01f, 1000.0f);
         glm::mat4 V = glm::lookAt(
